@@ -1,0 +1,74 @@
+// Carousel (Simple)
+.itemsSubContainer.carouselSimple {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+    // Items Container
+    .itemsContainer {
+        border-radius: 1em;
+        background: linear-gradient(rgb(204, 204, 204), rgb(255, 255, 255));
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+        width: 1280px;
+        scroll-behavior: smooth;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+        // Item container
+        .card {
+            background-color: rgb(37, 37, 37);
+            margin: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 1em;
+
+            // Item
+            .item {
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+
+                // Image
+                img {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                }
+                
+                // Title
+                .item-title {
+                    margin-top: 3px;
+                    font-weight: 100;
+                    font-size: 1em;
+                }
+                
+                // Add To Cart
+                .item-button-cart {
+                    margin: 0 auto;
+                    margin-top: auto;
+                    margin-bottom: 20px;
+                    font-family: Montserrat;
+                    font-size: 13px;
+                    border-radius: 8px;
+                    background-color: white;
+                    font-weight: bolder;
+                    border: 0;
+                    padding: 5px;
+                    transition: all 200ms;
+                }
+                .item-button-cart:hover {
+                    transform: scale(1.05);
+                }
+                .item-button-cart:active {
+                    transform: scale(.97);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.carouselSimple {
+    @media only screen and (max-width: 1480px) {
+        .itemsContainer {
+            width: 1120px !important;
+        }
+        
+    }
+    
+    @media only screen and (max-width: 1290px) {
+        .itemsContainer {
+            width: 960px !important;
+        }
+    }
+    
+    @media only screen and (max-width: 1150px) {
+        .itemsContainer {
+            width: 800px !important;
+        }
+    }
+    
+    @media only screen and (max-width: 980px) {
+        .itemsContainer {
+            width: 640px !important;
+        }            
+    }
+    
+    @media only screen and (max-width: 820px) {
+        .carouselContainer {
+            margin: 0 !important;
+            width: 100% !important;
+        }
+    
+        .itemsContainer {
+            overflow-x: scroll !important;
+            margin: 0 auto !important;
+        }
+    
+        .scrollLeftSimple {
+            display: none;
+        }
+    
+        .scrollRightSimple {
+            display: none;
+        }
+    }
+}
+
+.carouselWithDescription {
+    @media only screen and (max-width: 1480px) {
+        .itemsContainer {
+            width: 854px !important;
+        }
+    }
+}
+

@@ -1,0 +1,68 @@
+header {
+    background-color: black;
+    display: flex;
+    margin-bottom: 1em;
+
+    p {
+        color: white;
+    }
+
+    div#headerItemContainer {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        .headerItem:hover {
+            transform: scale(1.05);
+        }
+
+        .headerItem:active {
+            transform: scale(0.97);
+        }
+
+        div.headerItem {
+            margin: 0 5px;
+            display: inline;
+            align-items: center;
+            background-color: rgb(51, 51, 51);
+            padding-top: 2.5px;
+            padding-bottom: 2.5px;
+            padding-right: 8px;
+            padding-left: 8px;
+            border-radius: 1em;
+            transition: all 500ms;
+            margin-top: 13px;
+            margin-bottom: 13px;
+            cursor: pointer;
+
+            p {
+                color: rgb(255, 255, 255);
+
+                .fa-solid {
+                    margin-right: 5px;
+                }
+            }
+
+            
+        } 
+
+        #cartButtonContainer {
+            display: flex;
+
+            #cartBubble {
+                background-color: red;
+                display: none;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                margin-right: 2px;
+            }
+
+            #cartButton {
+                display: flex;
+            }
+        }
+        
+        
+    }
+}
