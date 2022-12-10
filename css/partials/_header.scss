@@ -48,6 +48,8 @@ header {
 
         #cartButtonContainer {
             display: flex;
+            position: absolute;
+            right: 10px;
 
             #cartBubble {
                 background-color: red;

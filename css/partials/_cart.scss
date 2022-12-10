@@ -1,6 +1,6 @@
 // Cart
 #cart {
-    background-color: rgb(26, 26, 26);
+    background-color: rgba(26, 26, 26, 0.9);
     position: absolute;
     width: 450px;
     max-height: 368px;
@@ -109,13 +109,13 @@
         }
     
         to {
-            top: 20px;
+            top: 28px;
         }
     }
     
     @keyframes cartClose {
         from {
-            top: 20px;
+            top: 28px;
         }
     
         to {
