@@ -46,6 +46,13 @@ header {
             
         } 
 
+        .mobileMenuCloser.headerItem {
+            display: none;
+            opacity: 0;
+            scale: 1.2;
+            margin-left: 8px;
+        }
+
         #cartButtonContainer {
             display: flex;
             position: absolute;
