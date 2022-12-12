@@ -27,8 +27,10 @@ let cartItems = document.querySelectorAll('.shoppingCartItem');
 var nothingPart = document.querySelector('#cartNothingPart');
 if (cartItems.length == 0) {
     nothingPart.innerHTML = `<h2>No hay nada en su carrito.</h2>`;
+    cartItemsContainer.style.marginTop = '0'
 } else if (cartItems.length > 0) {
     nothingPart.innerHTML = '';
+    cartItemsContainer.style.marginTop = '25px';
 }
 
 // Slider del carrito
@@ -68,8 +70,13 @@ if (firstCartItems.length == 0) {
 const cartBubble = document.querySelector('#cartBubble');
 if (cartItems.length == 0) {
     cartBubble.style.display = 'none';
+    cartBubble.style.opacity = '0';
 } else if (cartItems.length > 0) {
     cartBubble.style.display = 'block';
+    setTimeout(() => {
+        cartBubble.style.opacity = '1'; 
+     }, 100);
+    
 }
 //
 
@@ -134,13 +141,6 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
         </div>
     </div>`;
 
-    // // Añadir item al CartStorage
-    // if (localStorage.getItem('cartStorage')) {
-    //     localStorage.setItem('cartStorage', localStorage.getItem('cartStorage') + elementContent);
-    // } else {
-    //     localStorage.setItem('cartStorage', elementContent);
-    // }
-
     createElement.innerHTML = elementContent;
     cartItemsContainer.append(createElement);
 
@@ -176,11 +176,13 @@ function updateCartTotal() {
 
     localStorage.setItem('cartStorage', cartItemsContainer.innerHTML);
 
-    // Texto carrito sin contenido
+    // Texto carrito vacío
     if (cartItems.length == 0) {
         nothingPart.innerHTML = `<h2>No hay nada en su carrito.</h2>`;
+        cartItemsContainer.style.marginTop = '0';
     } else if (cartItems.length > 0) {
         nothingPart.innerHTML = '';
+        cartItemsContainer.style.marginTop = '25px';
     }    
 
     // Actualizar slide items carrito
@@ -198,9 +200,17 @@ function updateCartTotal() {
     
     // Actualizar burbuja del carrito
     if (cartItems.length == 0) {
-        cartBubble.style.display = 'none';
+        cartBubble.style.opacity = '0';
+        setTimeout(() => {
+            cartBubble.style.display = 'none';
+        }, 200);
+        
     } else if (cartItems.length > 0) {
         cartBubble.style.display = 'block';
+        setTimeout(() => {
+           cartBubble.style.opacity = '1'; 
+        }, 100);
+        
     }
 
     // Contador de items
@@ -283,6 +293,20 @@ function cartButtonClicked() {
         cartButton.addEventListener('click', cartButtonClicked);
     }, 1000); 
     
+}
+
+const cartCloser = document.querySelector('#closeCart');
+cartCloser.addEventListener('click', cartCloserClicked);
+
+function cartCloserClicked() {
+    cartButton.removeEventListener('click', cartButtonClicked);
+    const cart = document.querySelector('#cart');
+
+    cart.style.animationName = 'cartClose';
+
+    setTimeout(function() {
+        cartButton.addEventListener('click', cartButtonClicked);
+    }, 1000);
 }
 
 // Slide items carrito

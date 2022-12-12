@@ -1,5 +1,4 @@
 #formmain {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,7 @@
     background: linear-gradient(rgb(15, 15, 15), rgb(59, 59, 59));
     color: white;
     width: fit-content;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
     border-radius: 1em;
 }

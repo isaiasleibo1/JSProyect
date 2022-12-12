@@ -1,15 +1,45 @@
 // Cart
 #cart {
     background-color: rgba(26, 26, 26, 0.9);
-    position: absolute;
+    position: fixed;
     width: 450px;
-    max-height: 368px;
-    top: -368px;
+    max-height: 379px;
+    top: -379px;
     right: 20px;
     border-radius: 1em;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     z-index: 2;
+
+    #closeCart {
+        color: red;
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        cursor: pointer;
+        background-color: #000000;
+        padding: 2px 5px 1.5px 6px;
+        border-radius: 50%;
+
+        i::before {
+            width: 12.5px;
+            height: 12.5px;
+        }
+    }
+
+    #closeCart:hover {
+        transform: scale(1.1);
+    }
+
+    #cartTitle {
+        color: white;
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        background-color: black;
+        padding: 0 3px;
+        border-radius: 1em;
+    }
 
     // Cart Down Part
     #cartDownPart {
@@ -93,19 +123,20 @@
         color: white;
         width: fit-content;
         margin: 0 auto;
-        margin-top: 14px;
+        margin-top: 30px;
     }
 
     // Cart Item Container
     #cartItemsContainer {
         overflow-y: hidden;
         max-height: 237px;
+        margin-top: 25px;
         scroll-behavior: smooth;
     }
     
     @keyframes cartOpen {
         from {
-            top: -368px;
+            top: -379px;
         }
     
         to {
@@ -119,7 +150,7 @@
         }
     
         to {
-            top: -368px;
+            top: -379px;
         }
     }
 

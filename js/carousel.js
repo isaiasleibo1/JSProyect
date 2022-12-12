@@ -43,7 +43,13 @@ scrollLeftDescription.addEventListener('click', carouselScrollLeftDescription);
 function carouselScrollLeftDescription() {
     scrollRightDescription.removeEventListener('click', carouselScrollRightDescription);
     scrollLeftDescription.removeEventListener('click', carouselScrollLeftDescription);
-    itemsContainerDescription.scrollLeft -= 427;
+    
+    let windowWidth = window.outerWidth;
+    if (windowWidth <= 1030) {
+        itemsContainerDescription.scrollLeft -= 247;
+    } else {
+        itemsContainerDescription.scrollLeft -= 427; 
+    }
 
     setTimeout(() => {
         scrollRightDescription.addEventListener('click', carouselScrollRightDescription);
@@ -54,7 +60,13 @@ function carouselScrollLeftDescription() {
 function carouselScrollRightDescription() {
     scrollRightDescription.removeEventListener('click', carouselScrollRightDescription);
     scrollLeftDescription.removeEventListener('click', carouselScrollLeftDescription);
-    itemsContainerDescription.scrollLeft += 427;
+
+    let windowWidth = window.outerWidth;
+    if (windowWidth <= 1030) {
+        itemsContainerDescription.scrollLeft += 247;
+    } else {
+        itemsContainerDescription.scrollLeft += 427; 
+    }
 
     setTimeout(() => {
         scrollRightDescription.addEventListener('click', carouselScrollRightDescription);

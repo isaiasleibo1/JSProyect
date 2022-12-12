@@ -1,33 +1,32 @@
 .carouselSimple {
-    @media only screen and (max-width: 1480px) {
+    @media screen and (max-width: 1480px) {
         .itemsContainer {
             width: 1120px !important;
         }
         
     }
     
-    @media only screen and (max-width: 1290px) {
+    @media screen and (max-width: 1290px) {
         .itemsContainer {
             width: 960px !important;
         }
     }
-    
-    @media only screen and (max-width: 1150px) {
+
+    @media screen and (max-width: 1150px) {
         .itemsContainer {
             width: 800px !important;
         }
     }
     
-    @media only screen and (max-width: 980px) {
+    @media screen and (max-width: 980px) {
         .itemsContainer {
             width: 640px !important;
         }            
     }
     
-    @media only screen and (max-width: 820px) {
+    @media screen and (max-width: 820px) {
         .carouselContainer {
             margin: 0 !important;
-            width: 100% !important;
         }
     
         .itemsContainer {
@@ -43,13 +42,89 @@
             display: none;
         }
     }
+
+    @media screen and (max-width: 700px) {
+        .itemsContainer{
+            width: 480px !important;
+        }
+    }
+
+    @media screen and (max-width: 530px) {
+        .itemsContainer {
+            width: 320px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .carouselTitle {
+        left: -30px !important;
+    }
 }
 
 .carouselWithDescription {
-    @media only screen and (max-width: 1480px) {
+    @media screen and (max-width: 1480px) {
         .itemsContainer {
             width: 854px !important;
         }
+    }
+    
+    @media screen and (max-width: 1030px) {
+        .itemsContainer {
+            width: 741px !important;
+        }
+        
+        .item {
+            grid-template-areas: 
+            "item"
+            "description" !important; 
+
+            article {
+                height: 120px !important;
+            }
+
+            section {
+                .item-button-cart {
+                    margin-bottom: 0 !important;
+                    margin-top: 10px !important;
+                }
+
+                .item-title {
+                    margin: 0 10px !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 920px) {
+        .itemsContainer {
+            width: 494px !important;
+        }
+    }
+
+    @media screen and (max-width: 820px) {
+        .carouselContainer {
+            margin: 0 !important;
+        }
+    
+        .itemsContainer {
+            overflow-x: scroll !important;
+            margin: 0 auto !important;
+        }
+
+        .scrollLeftDescription {
+            display: none;
+        }
+
+        .scrollRightDescription {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 530px) {
+
+        
+        
     }
 }
 
