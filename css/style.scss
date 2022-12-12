@@ -27,9 +27,9 @@ body {
 @import "partials/carouselContainer";
 @import "partials/cart";
 @import "partials/footer";
-@import "partials/mediaQuerys";
-@import "partials/carosuelSimpleResponsive";
+// @import "partials/carosuelSimpleResponsive";
 @import "partials/form";
+@import "partials/mediaQuerys";
 
 ::-webkit-scrollbar {
     display: none;
@@ -90,5 +90,160 @@ div#mobileMenu {
 
 
 
+// Rsponsive
+.carouselSimple {
+    @media screen and (max-width: 1480px) {
+        .itemsContainer {
+            width: 1120px;
+        }
+        
+    }
+    
+    @media screen and (max-width: 1290px) {
+        .itemsContainer {
+            width: 960px;
+        }
+    }
+
+    @media screen and (max-width: 1150px) {
+        .itemsContainer {
+            width: 800px;
+        }
+    }
+    
+    @media screen and (max-width: 980px) {
+        .itemsContainer {
+            width: 640px;
+        }            
+    }
+    
+    @media screen and (max-width: 820px) {
+        .carouselContainer {
+            margin: 0;
+        }
+    
+        .itemsContainer {
+            overflow-x: scroll;
+            margin: 0 auto;
+        }
+    
+        .scrollLeftSimple {
+            display: none;
+        }
+    
+        .scrollRightSimple {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .itemsContainer{
+            width: 480px;
+            
+        }
+    }
+
+    @media screen and (max-width: 530px) {
+        .itemsContainer {
+            width: 100vw;
+            border-radius: 0;
+
+            .card {
+                width: 33.3333vw;
+            }
+
+            .item {
+                width: calc(25vw - 20px);
+                height: 41vw;
+                
+                .item-price {
+                    font-size: 20px;
+                }
+
+                .item-title {
+                    font-size: 10px;
+                }
+
+                .item-button-cart {
+                    font-size: 10px;
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 490px) {
+        .itemsContainer {
+            .item {
+                height: 42vw;
+            }
+        }
+    }
+
+    @media screen and (max-width: 474px) {
+        .itemsContainer {
+            .item {
+                height: 46vw;
+            }
+        }
+    }
+
+    @media screen and (max-width: 436px) {
+        .itemsContainer {
+
+            .card {
+                width: 33.3333vw;
+            }
+
+            .item {
+                width: calc(33.3333vw - 20px);
+                height: 50vw;
+                // height: 54vw;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+
+        .itemsContainer {
+            .item {
+                height: 54vw;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 400px) {
+        .itemsContainer {
+            .item {
+                img {
+                    width: 72px; 
+                    height: 72px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .itemsContainer {
+            .item {
+                height: 56vw;
+
+                .item-button-cart {
+                    margin-bottom: 10px;
+                }
+                .item-price {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}
 
 
