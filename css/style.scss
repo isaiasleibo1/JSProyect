@@ -40,9 +40,52 @@ body {
     display: none;
 }
 
+div#mobileMenu {
+    display: none;
+    opacity: 0;
+    z-index: 2;
+    background-color: rgb(2, 0, 32);
+    position: absolute;
+    top: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    color: white;
 
+    .headerItem:hover {
+        transform: scale(1.05);
+    }
 
+    .headerItem:active {
+        transform: scale(0.97);
+    }
 
+    div.headerItem {
+        width: fit-content;
+        align-items: center;
+        background-color: rgb(51, 51, 51);
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
+        padding-right: 8px;
+        padding-left: 8px;
+        border-radius: 1em;
+        transition: all 500ms;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+
+        p {
+            color: rgb(255, 255, 255);
+
+            .fa-solid {
+                margin-right: 5px;
+            }
+        }
+
+        
+    } 
+
+}
 
 
 
