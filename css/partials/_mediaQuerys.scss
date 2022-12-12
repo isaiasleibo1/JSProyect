@@ -46,19 +46,123 @@
     @media screen and (max-width: 700px) {
         .itemsContainer{
             width: 480px !important;
+            
         }
     }
 
     @media screen and (max-width: 530px) {
         .itemsContainer {
-            width: 320px !important;
+            width: 100vw !important;
+            border-radius: 0 !important;
+
+            .card {
+                width: 33.3333vw;
+            }
+
+            .item {
+                width: calc(25vw - 20px) !important;
+                height: 41vw !important;
+                
+                .item-price {
+                    font-size: 20px !important;
+                }
+
+                .item-title {
+                    font-size: 10px !important;
+                }
+
+                .item-button-cart {
+                    font-size: 10px !important;
+                }
+
+                img {
+                    width: 80px !important;
+                    height: 80px !important;
+                    margin: 10px auto !important;
+                }
+            }
         }
     }
+
+    @media screen and (max-width: 490px) {
+        .itemsContainer {
+            .item {
+                height: 42vw !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 474px) {
+        .itemsContainer {
+            .item {
+                height: 46vw !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 436px) {
+        .itemsContainer {
+
+            .card {
+                width: 33.3333vw;
+            }
+
+            .item {
+                width: calc(33.3333vw - 20px) !important;
+                height: 50vw !important;
+                // height: 54vw !important;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+
+        .itemsContainer {
+            .item {
+                height: 54vw !important;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 400px) {
+        .itemsContainer {
+            .item {
+                img {
+                    width: 72px !important; 
+                    height: 72px !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .itemsContainer {
+            .item {
+                height: 56vw !important;
+
+                .item-button-cart {
+                    margin-bottom: 10px !important;
+                }
+                .item-price {
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 820px) {
     .carouselTitle {
         left: -30px !important;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .carouselTitle {
+        left: 5px !important;
+        font-size: 20px !important;
     }
 }
 

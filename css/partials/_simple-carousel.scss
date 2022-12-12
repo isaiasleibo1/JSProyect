@@ -22,7 +22,7 @@
             margin: 10px;
             color: white;
             text-align: center;
-            border-radius: 1em;
+            border-radius: 12px;
 
             // Item
             .item {
@@ -43,9 +43,10 @@
                 
                 // Title
                 .item-title {
-                    margin-top: 3px;
                     font-weight: 100;
                     font-size: 1em;
+                    margin: 0 5px;
+                    margin-top: 3px;
                 }
                 
                 // Add To Cart
