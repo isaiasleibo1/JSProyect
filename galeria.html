@@ -71,22 +71,32 @@
 <body>
     <header>
         <div id="headerItemContainer">
-          <div class="headerItem" onclick="location.href='./index.html'">
+          <div class="mobileMenuOpener headerItem">
+            <p>
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </p>
+          </div>
+          <div class="mobileMenuCloser headerItem">
+            <p>
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </p>
+          </div>
+          <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
             <p>
               <i class="fa-solid fa-house"></i>Inicio
             </p>
           </div>
-          <div class="headerItem">
+          <div class="headerItem pageRedirect">
             <p>
               <i class="fa-solid fa-user"></i>Sobre Nosotros
             </p>
           </div>
-          <div class="headerItem" onclick="location.href='./contacto.html'">
+          <div class="headerItem pageRedirect" onclick="location.href='./contacto.html'">
             <p>
               <i class="fa-solid fa-envelope"></i>Contacto
             </p>
           </div>
-          <div class="headerItem">
+          <div class="headerItem pageRedirect">
             <p>
               <i class="fa-solid fa-camera"></i>Galería
             </p>
@@ -132,6 +142,30 @@
       </div>
     </div>
 
+    <div id="mobileMenu">
+      <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
+        <p>
+          <i class="fa-solid fa-house"></i>Inicio
+        </p>
+      </div>
+      <div class="headerItem pageRedirect">
+        <p>
+          <i class="fa-solid fa-user"></i>Sobre Nosotros
+        </p>
+      </div>
+      <div class="headerItem pageRedirect" onclick="location.href='./contacto.html'">
+        <p>
+          <i class="fa-solid fa-envelope"></i>Contacto
+        </p>
+      </div>
+      <div class="headerItem pageRedirect" onclick="location.href='./galeria.html'">
+        <p>
+          <i class="fa-solid fa-camera"></i>Galería
+        </p>
+      </div>
+      
+    </div>
+
     <div id="images_container">
         <img src="./img/otherimg/1.jpeg" alt="">
         <img src="./img/otherimg/2.jpeg" alt="">
@@ -160,6 +194,7 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script src="./js/mobileMenu.js"></script>
     <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
 </body>
 </html>

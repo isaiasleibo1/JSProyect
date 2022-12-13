@@ -3,6 +3,7 @@ const cartItemsContainer = document.querySelector('#cartItemsContainer');
 const cartBuyButton = document.querySelector('#shopping-cart-buy');
 cartItemsContainer.innerHTML = localStorage.getItem('cartStorage');
 
+
 // cartStorage
 // Botón de eliminar item
 var itemDeleteButtons = document.querySelectorAll('.btn-delete')
@@ -280,13 +281,18 @@ cartButton.addEventListener('click', cartButtonClicked);
 function cartButtonClicked() {
     cartButton.removeEventListener('click', cartButtonClicked);
     const cart = document.querySelector('#cart');
+    let visualWidth = window.innerWidth;
 
-    if (cart.style.animationName == 'cartClose') {
-        cart.style.animationName = 'cartOpen';
-    } else if (cart.style.animationName == 'cartOpen') {
-        cart.style.animationName = 'cartClose';
-    } else {
-        cart.style.animationName = 'cartOpen';
+    if (visualWidth <= 620) {
+        window.open("./mobileCart.html", "_self");
+    } else if (visualWidth > 620) {
+        if (cart.style.animationName == 'cartClose') {
+            cart.style.animationName = 'cartOpen';
+        } else if (cart.style.animationName == 'cartOpen') {
+            cart.style.animationName = 'cartClose';
+        } else {
+            cart.style.animationName = 'cartOpen';
+        }
     }
 
     setTimeout(function() {
