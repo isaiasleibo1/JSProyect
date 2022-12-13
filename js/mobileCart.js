@@ -1,33 +1,36 @@
-const itemToCartButtons = document.querySelectorAll('.item-button-cart');
-const cartItemsContainer = document.querySelector('#cartItemsContainer');
-const cartBuyButton = document.querySelector('#shopping-cart-buy');
-
+const cartMain = document.querySelector('#cartMain');
+cartMain.innerHTML = localStorage.getItem('cartStorage');
 
 // cartStorage
 // Botón de eliminar item
-var itemDeleteButtons = document.querySelectorAll('.btn-delete')
+setTimeout(() => {
+    const itemDeleteButtons = document.querySelectorAll('.btn-delete');
     itemDeleteButtons.forEach((itemDeleteButton) => {
-      itemDeleteButton.addEventListener('click', itemDeleteButtonClicked);  
-})
+        itemDeleteButton.addEventListener('click', itemDeleteButtonClicked);  
+    })
+
+    const moreValueInput = document.querySelectorAll('.moreValueInput');
+    moreValueInput.forEach((button) => {
+        button.addEventListener('click', moreValueInputClicked);
+    });
+
+    var lessValueInput = document.querySelectorAll('.lessValueInput');
+    lessValueInput.forEach((button) => {
+        button.addEventListener('click', lessValueInputClicked);
+    });
+}, 50);
+
+    
 
 // Botón de aumentar cantidad
-var moreValueInput = document.querySelectorAll('.moreValueInput');
-moreValueInput.forEach((button) => {
-    button.addEventListener('click', moreValueInputClicked);
-});
 
 // Botón de disminuir cantidad
-var lessValueInput = document.querySelectorAll('.lessValueInput');
-lessValueInput.forEach((button) => {
-    button.addEventListener('click', lessValueInputClicked);
-})
 
 
 // Total del carrito
 setTimeout(() => {
     const firstTotalText = document.querySelector('#shopping-cart-total');
     const firstCartItems = document.querySelectorAll('.shoppingCartItem');
-    console.log("🚀 ~ file: mobileCart.js:29 ~ firstCartItems", firstCartItems)
 
     let firstTotal = 0;
 
@@ -50,6 +53,7 @@ setTimeout(() => {
 
 function itemDeleteButtonClicked(event) {
     const button = event.target;
+    console.log(button)
     const item = button.closest('.shoppingCartItem').parentElement;
 
     item.remove();
@@ -72,7 +76,6 @@ function moreValueInputClicked(event) {
     updateCartTotal();
 }
 
-// Disminuir cantidad item
 function lessValueInputClicked(event) {
     const button = event.target;
     const item = button.closest('.shoppingCartItem');
@@ -80,7 +83,6 @@ function lessValueInputClicked(event) {
 
     if (input.value > 1) {
         input.value--;
-        
     } else {
         input.value = 1;
     };
@@ -88,4 +90,29 @@ function lessValueInputClicked(event) {
     input.parentElement.innerHTML = `<input class="shopping-cart-quantity-input" readonly="" type="number" value="${input.value}">`;
 
     updateCartTotal();
+}
+
+
+function updateCartTotal() {
+    const cartItems = document.querySelectorAll('.shoppingCartItem');
+
+    const totalText = document.querySelector('#shopping-cart-total');
+    let total = 0;
+
+    if (cartItems.length == 0) {
+        totalText.innerHTML = '$0';
+    } else {
+        cartItems.forEach((cartItem) => {
+            const cartItemPrice = cartItem.querySelector('.shopping-cart-item-price');
+            const cartItemPriceRepaired = Number(cartItemPrice.textContent.replace("$", ""));
+
+            const cartItemQuantity = cartItem.querySelector('.shopping-cart-quantity-input');
+            const cartItemQuantityRepaired = Number(cartItemQuantity.value);
+
+            total += cartItemPriceRepaired * cartItemQuantityRepaired;
+            totalText.innerHTML = `$${total.toFixed(0)}`;
+        });
+    }
+
+    localStorage.setItem('cartStorage', cartMain.innerHTML);
 }

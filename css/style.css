@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: Montserrat;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   -webkit-user-select: none;
@@ -441,7 +441,7 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   margin-top: 10px;
   color: white;
 }
-#cart .shoppingCartItem img, #cart .shoppingCartItem h3, #cart .shoppingCartItem .price, #cart .shoppingCartItem .moreValueInput, #cart .shoppingCartItem .lessValueInput {
+#cart .shoppingCartItem img, #cart .shoppingCartItem h3, #cart .shoppingCartItem .price, #cart .shoppingCartItem .moreValueInput, #cart #cartMain .shoppingCartItem :nth-child(5) .lessValueInput, #cartMain #cart .shoppingCartItem :nth-child(5) .lessValueInput, #cart .shoppingCartItem .lessValueInput {
   margin-right: 10px;
 }
 #cart .shoppingCartItem h3 {
@@ -485,7 +485,7 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   border-radius: 50%;
   padding: 3px;
 }
-#cart .shoppingCartItem .moreValueInput, #cart .shoppingCartItem .lessValueInput {
+#cart .shoppingCartItem .moreValueInput, #cart #cartMain .shoppingCartItem :nth-child(5) .lessValueInput, #cartMain #cart .shoppingCartItem :nth-child(5) .lessValueInput, #cart .shoppingCartItem .lessValueInput {
   background: linear-gradient(rgb(28, 138, 0), rgb(0, 185, 114));
   width: 20px;
   height: 20px;
@@ -496,7 +496,7 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   border-radius: 50%;
   transition: all 200ms;
 }
-#cart .shoppingCartItem .moreValueInput p, #cart .shoppingCartItem .lessValueInput p {
+#cart .shoppingCartItem .moreValueInput p, #cart #cartMain .shoppingCartItem :nth-child(5) .lessValueInput p, #cartMain #cart .shoppingCartItem :nth-child(5) .lessValueInput p, #cart .shoppingCartItem .lessValueInput p {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -785,6 +785,140 @@ input.forminput, textarea {
 
 textarea {
   resize: none;
+}
+
+#mobileMain {
+  display: flex;
+  flex-direction: column;
+}
+
+#cartMain {
+  display: grid;
+  justify-items: center;
+}
+#cartMain .shoppingCartItem {
+  margin: 10px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+}
+#cartMain .shoppingCartItem .shopping-cart-image {
+  width: 180px;
+  height: 180px;
+  background-color: rgb(48, 48, 48);
+  padding: 10px;
+  margin: 1em auto;
+  border-radius: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#cartMain .shoppingCartItem .shopping-cart-item-title {
+  text-align: center;
+  margin: 0 10px;
+}
+#cartMain .shoppingCartItem .price {
+  text-align: center;
+}
+#cartMain .shoppingCartItem .input-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#cartMain .shoppingCartItem .input-container .shopping-cart-quantity-input {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  font-family: Montserrat;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+}
+#cartMain .shoppingCartItem :nth-child(5) {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#cartMain .shoppingCartItem :nth-child(5) .moreValueInput, #cartMain .shoppingCartItem :nth-child(5) .lessValueInput {
+  background: linear-gradient(rgb(28, 138, 0), rgb(0, 185, 114));
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0 2.5px;
+  align-items: center;
+  border-radius: 6px;
+  transition: all 200ms;
+}
+#cartMain .shoppingCartItem :nth-child(5) .moreValueInput p, #cartMain .shoppingCartItem :nth-child(5) .lessValueInput p {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+#cartMain .shoppingCartItem :nth-child(5) .moreValueInput:hover, #cartMain .shoppingCartItem :nth-child(5) .lessValueInput:hover {
+  transform: scale(1.05);
+}
+#cartMain .shoppingCartItem :nth-child(5) .moreValueInput:active, #cartMain .shoppingCartItem :nth-child(5) .lessValueInput:active {
+  transform: scale(1);
+}
+#cartMain .shoppingCartItem :nth-child(5) .lessValueInput {
+  background: linear-gradient(rgb(255, 166, 0), rgb(209, 118, 15));
+  margin-bottom: 0;
+}
+#cartMain .shoppingCartItem :nth-child(6) {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px;
+}
+#cartMain .shoppingCartItem :nth-child(6) .btn-delete {
+  width: 50px;
+  height: 20px;
+  border: 0;
+  background: linear-gradient(rgb(255, 0, 0), rgb(255, 111, 111));
+  font-family: Montserrat;
+  color: white;
+  font-weight: bolder;
+  border-radius: 7px;
+  transition: all 200ms;
+}
+#cartMain .shoppingCartItem :nth-child(6) .btn-delete:hover {
+  transform: scale(1.05);
+}
+#cartMain .shoppingCartItem :nth-child(6) .btn-delete:active {
+  transform: scale(1);
+}
+
+#mobileTotalContainer {
+  background-color: rgb(26, 26, 26);
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 0;
+  padding: 1em;
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
+  text-align: center;
+  position: fixed;
+  bottom: 70px;
+  font-size: 12px;
+}
+#mobileTotalContainer #buyButton {
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 820px) {

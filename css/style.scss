@@ -15,7 +15,7 @@ html {
 
 body {
     font-family: Montserrat;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     user-select: none;
@@ -30,6 +30,7 @@ body {
 @import "partials/footer";
 @import "partials/carosuelSimpleResponsive";
 @import "partials/form";
+@import "partials/mobileCart";
 @import "partials/mediaQuerys";
 
 ::-webkit-scrollbar {

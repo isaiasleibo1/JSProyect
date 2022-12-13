@@ -74,11 +74,17 @@
         </div>
       </div>
 
-      <main>
+      <main id="mobileMain">
+        <div id="cartNothingPart"></div>
         <div id="cartMain">
 
         </div>
-        <div id="shopping-cart-total"></div>
+        <div id="mobileTotalContainer">
+          <h3>Total</h3>
+          <div id="shopping-cart-total"></div>
+          <button id="buyButton">Comprar</button>
+        </div>
+        
 
       </main>
 
@@ -104,9 +110,5 @@
     <script src="./js/mobileMenu.js"></script>
     <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
     <script src="./js/mobileCart.js"></script>
-    <script>
-        const cartMain = document.querySelector('#cartMain');
-        cartMain.innerHTML = localStorage.getItem('cartStorage');
-    </script>
 </body>
 </html>

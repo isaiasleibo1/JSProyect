@@ -1,0 +1,134 @@
+#mobileMain {
+    display: flex;
+    flex-direction: column;
+}
+
+#cartMain {
+    display: grid;
+    justify-items: center;
+
+    .shoppingCartItem {
+        margin: 10px 10px;
+        width: fit-content;
+        background-color: black;
+        color: white;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        width: 230px;
+
+        .shopping-cart-image {
+            width: 180px;
+            height: 180px;
+            background-color: rgb(48, 48, 48);
+            padding: 10px;
+            margin: 1em auto;
+            border-radius: 20px;
+            object-fit: contain;
+        }
+
+        .shopping-cart-item-title {
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .price {
+            text-align: center;
+        }
+
+        .input-container {
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 5px; 
+
+            .shopping-cart-quantity-input {
+                width: 30px;
+                height: 30px;
+                border: 0;
+                border-radius: 50%;
+                font-family: Montserrat;
+                font-weight: bolder;
+                font-size: 15px;
+                text-align: center;
+                outline: none;
+            }
+        }
+
+        :nth-child(5) {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 5px;
+
+            .moreValueInput {
+                background: linear-gradient(rgb(28, 138, 0), rgb(0, 185, 114));
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                margin: 0 2.5px;
+                align-items: center;
+                border-radius: 6px;
+                transition: all 200ms;
+                p {
+                    width: min-content;
+                }
+            }
+            .moreValueInput:hover {
+                transform: scale(1.05);
+            }
+            .moreValueInput:active {
+                transform: scale(1);
+            }
+            .lessValueInput {
+                @extend .moreValueInput;
+                background: linear-gradient(rgb(255, 166, 0),rgb(209, 118, 15));
+                margin-bottom: 0;
+                
+            }
+        }
+
+        :nth-child(6) {
+            margin: 0 auto;
+            width: fit-content;
+            padding: 7px;
+            .btn-delete {
+                width: 50px;
+                height: 20px;
+                border: 0;
+                background: linear-gradient(rgb(255, 0, 0), rgb(255, 111, 111));
+                font-family: Montserrat;
+                color: white;
+                font-weight: bolder;
+                border-radius: 7px;
+                transition: all 200ms;
+            }
+            .btn-delete:hover {
+                transform: scale(1.05);
+            }
+            .btn-delete:active {
+                transform: scale(1);
+            }
+        }
+
+        
+    }
+}
+
+#mobileTotalContainer {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    width: fit-content;
+    right: 0;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 70px;
+    font-size: 12px;
+
+    #buyButton {
+        margin-top: 5px;
+    }
+}
