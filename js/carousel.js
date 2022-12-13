@@ -44,7 +44,7 @@ function carouselScrollLeftDescription() {
     scrollRightDescription.removeEventListener('click', carouselScrollRightDescription);
     scrollLeftDescription.removeEventListener('click', carouselScrollLeftDescription);
     
-    let windowWidth = window.outerWidth;
+    let windowWidth = window.innerWidth;
     if (windowWidth <= 1030) {
         itemsContainerDescription.scrollLeft -= 247;
     } else {
@@ -61,11 +61,11 @@ function carouselScrollRightDescription() {
     scrollRightDescription.removeEventListener('click', carouselScrollRightDescription);
     scrollLeftDescription.removeEventListener('click', carouselScrollLeftDescription);
 
-    let windowWidth = window.outerWidth;
+    let windowWidth = window.innerWidth;
     if (windowWidth <= 1030) {
         itemsContainerDescription.scrollLeft += 247;
     } else {
-        itemsContainerDescription.scrollLeft += 427; 
+        itemsContainerDescription.scrollLeft += 427;
     }
 
     setTimeout(() => {

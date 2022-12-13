@@ -9,16 +9,18 @@ const body = document.querySelector('body');
 
 
 function mobileMenuOpenerClicked() {
+
     
-    mobileMenuOpener.style.opacity = '0';
+    
+     mobileMenuOpener.style.opacity = '0';
 
-    setTimeout(() => {
-        mobileMenuOpener.style.display = 'none';
-        mobileMenuCloser.style.display = 'inline';
+     setTimeout(() => {
+         mobileMenuOpener.style.display = 'none';
+         mobileMenuCloser.style.display = 'inline';
 
-        setTimeout(() => {
-            mobileMenuCloser.style.opacity = '1';
-        }, 50);
+         setTimeout(() => {
+             mobileMenuCloser.style.opacity = '1';
+         }, 50);
         
     }, 200)
     
@@ -41,24 +43,10 @@ function mobileMenuCloserClicked() {
 }
 
 function openMobileMenu() {
-
-    setTimeout(() => {
-       mobileMenu.style.display = 'block';
-
-       setTimeout(() => {
-        mobileMenu.style.opacity = '0.95';
-       }, 50);
-         
-    }, 200);
+    mobileMenu.style.animationName = 'mobileMenuOpen';
     
 }
 
 function closeMobileMenu() {
-    mobileMenu.style.opacity = '0'; 
-    
-    setTimeout(() => {
-       mobileMenu.style.display = 'none';
-        
-    }, 200);
-    
+    mobileMenu.style.animationName = 'mobileMenuClose';
 }

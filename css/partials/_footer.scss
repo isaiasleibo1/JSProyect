@@ -11,6 +11,14 @@ footer {
         width: fit-content;
         margin: 0 auto;
 
+        @media screen and (max-width: 460px) {
+            transform: scale(0.8);
+        }
+
+        @media screen and (max-width: 350px) {
+            transform: scale(0.7);
+        }
+
         .social-media-app {
             display: flex;
             justify-content: center;

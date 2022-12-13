@@ -2,6 +2,7 @@
 @media screen and (max-width: 820px) {
     .carouselTitle {
         left: -30px !important;
+        width: fit-content !important;
     }
 }
 
@@ -11,6 +12,8 @@
         font-size: 20px !important;
     }
 }
+
+//
 
 .carouselWithDescription {
     @media screen and (max-width: 1480px) {
@@ -28,6 +31,10 @@
             grid-template-areas: 
             "item"
             "description" !important; 
+
+            img {
+                margin: 10px auto 0 auto !important;
+            }
 
             article {
                 height: 120px !important;
@@ -71,7 +78,67 @@
         }
     }
 
+    @media screen and (max-width: 530px) {
+        width: 100vw !important;
+        .itemsContainer {
+            width: 100vw !important;
+            border-radius: 0 !important;
+
+            .item, .card, section {
+                width: calc(33.3333vw - 20px) !important;
+            }
+
+            .item {
+                .item-price {
+                    font-size: 20px !important;
+                }
+
+                .item-title {
+                    font-size: 10px !important;
+                }
+
+                .item-button-cart {
+                    font-size: 10px !important;
+                    margin-bottom: 15px !important;
+                }
+
+                article {
+                    margin: 0 auto !important;
+                    width: calc(33.3333vw - 40px) !important;
+                    height: fit-content !important;
+                    
+                    li {
+                        display: inline;
+                        font-size: 12px;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    @media screen and (max-width: 470px) {
+        .itemsContainer {
+            .item, .card, section {
+                width: calc(50vw - 20px) !important;
+            }
+
+            .item {
+                article {
+                    width: calc(50vw - 40px) !important;
+                    margin-bottom: 10px !important;
+
+                    p {
+                        width: calc(50vw - 40px) !important;
+                    }
+                }
+            }  
+        }
+    }
+
 }
+
+//
 
 @media screen and (max-width: 620px) {
     header {
@@ -87,15 +154,6 @@
         .mobileMenuOpener, .mobileMenuCloser {
             background: none !important;
         }
-
-        // .mobileMenuOpener {
-        //     i {
-        //        color: white;
-        //         height: 32px; 
-        //     }
-
-            
-        // }
     }
 }
 
