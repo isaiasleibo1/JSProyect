@@ -1,8 +1,6 @@
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
 
-// cartStorage
-// Botón de eliminar item
 setTimeout(() => {
     const itemDeleteButtons = document.querySelectorAll('.btn-delete');
     itemDeleteButtons.forEach((itemDeleteButton) => {
@@ -20,14 +18,6 @@ setTimeout(() => {
     });
 }, 50);
 
-    
-
-// Botón de aumentar cantidad
-
-// Botón de disminuir cantidad
-
-
-// Total del carrito
 setTimeout(() => {
     const firstTotalText = document.querySelector('#shopping-cart-total');
     const firstCartItems = document.querySelectorAll('.shoppingCartItem');
@@ -56,7 +46,18 @@ function itemDeleteButtonClicked(event) {
     console.log(button)
     const item = button.closest('.shoppingCartItem').parentElement;
 
+    
+
     item.remove();
+    
+    const cartItems = document.querySelectorAll('.shoppingCartItem');
+    
+    if (cartItems.length == 0) {
+        setTimeout(() => {
+            window.open("./index.html", "_self");
+        }, 100)
+    }
+    
     updateCartTotal();
 }
 
@@ -115,4 +116,27 @@ function updateCartTotal() {
     }
 
     localStorage.setItem('cartStorage', cartMain.innerHTML);
+}
+
+
+const cartBuyButton = document.querySelector('#buyButton');
+cartBuyButton.addEventListener('click', cartBuyButtonClicked);
+
+function cartBuyButtonClicked() {
+    const cartItems = document.querySelectorAll('.shoppingCartItem');
+
+    if (cartItems.length == 0) {
+        alert('Por favor, seleccione un producto.')
+    } else {
+        cartMain.innerHTML = '';
+        updateCartTotal();
+        setTimeout(() => {
+            alert('Su pedido llegará pronto.')
+
+            setTimeout(() => {
+                window.open("./index.html", "_self");
+            })
+        }, 200);
+    }
+    
 }

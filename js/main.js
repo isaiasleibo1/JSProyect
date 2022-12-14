@@ -284,7 +284,17 @@ function cartButtonClicked() {
     let visualWidth = window.innerWidth;
 
     if (visualWidth <= 620) {
-        window.open("./mobileCart.html", "_self");
+        const cartItems = document.querySelectorAll('.shoppingCartItem');
+        if (cartItems.length == 0) {
+            alert('Por favor seleccione un producto.');
+        } else if (cartItems.length >= 1) {
+            window.open("./mobileCart.html", "_self");
+        }
+
+
+
+
+        
     } else if (visualWidth > 620) {
         if (cart.style.animationName == 'cartClose') {
             cart.style.animationName = 'cartOpen';

@@ -8,28 +8,59 @@
     justify-items: center;
 
     .shoppingCartItem {
-        margin: 10px 10px;
-        width: fit-content;
+        margin: 10px 0;
+        width: 400px;
         background-color: black;
         color: white;
         border-radius: 1em;
-        display: flex;
-        flex-direction: column;
-        width: 230px;
+        display: grid;
+        grid-template-areas: 
+        "img title"
+        "img price"
+        "img input"
+        "img value"
+        "img delete";
+        grid-template-columns: 200px 1fr;
+        box-shadow: 5px 5px 5px #424242,
+           -5px -5px 5px #919191;
+           
+           
 
         .shopping-cart-image {
             width: 180px;
             height: 180px;
             background-color: rgb(48, 48, 48);
             padding: 10px;
-            margin: 1em auto;
-            border-radius: 20px;
+            margin: 0 auto;
+            border-radius: 1em;
             object-fit: contain;
+            grid-area: img;
+            position: relative;
+            left: 0;
+
+            
         }
+        
+        
 
         .shopping-cart-item-title {
             text-align: center;
             margin: 0 10px;
+            margin-top: 7px;
+        }
+        
+        @media screen and (max-width: 480px) {
+            .shopping-cart-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .shopping-cart-item-title {
+                font-size: 16px;
+            }
+            
+            width: 370px;
+            grid-template-columns: 170px 1fr;
         }
 
         .price {
@@ -111,22 +142,61 @@
             }
         }
 
+        @media screen and (max-width: 420px) {
+            .shopping-cart-image {
+                width: 130px;
+                height: 130px;
+            }
+
+            .shopping-cart-item-title {
+                font-size: 14px;
+            }
+
+            .price {
+                font-size: 12px;
+            }
+
+            .shopping-cart-quantity-input {
+                width: 25px !important;
+                height: 25px !important;
+            }
+
+            .moreValueInput, .lessValueInput {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            .btn-delete {
+                height: 17px !important;
+            }
+            
+            
+            width: 310px;
+            grid-template-columns: 150px 1fr;
+        }
+
         
     }
 }
 
 #mobileTotalContainer {
-    background-color: rgb(26, 26, 26);
+    background: linear-gradient(rgb(0, 0, 68), rgb(0, 0, 100));
+    border: 2px solid white;
+    box-shadow: rgba(50, 50, 93) 0px 50px 100px -20px, rgba(0, 0, 0) 0px 30px 60px -30px;
     color: white;
     width: fit-content;
-    right: 0;
+    right: -2px;
     padding: 1em;
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
     text-align: center;
     position: fixed;
-    bottom: 70px;
-    font-size: 12px;
+    bottom: 42px;
+    font-size: 14px;
+
+    #shopping-cart-total {
+        font-size: 12px;
+    }
 
     #buyButton {
         margin-top: 5px;
