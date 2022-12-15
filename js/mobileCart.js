@@ -1,6 +1,25 @@
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
 
+console.log('Atencón!!: Si la proporcón horizontal de la pantalla cambia la página será recargada');
+
+var windowWidth = window.innerWidth;
+setInterval(() => {
+    let windowWidthChecker = window.innerWidth;
+    if(windowWidth != windowWidthChecker) {
+        location.reload();
+    }
+
+    if (windowWidthChecker > 620) {
+        window.open("./index.html", "_self");
+    }
+}, 1000);
+
+const cartItems2 = document.querySelectorAll('.shoppingCartItem');
+if (cartItems2.length <= 0) {
+    window.open("./index.html", "_self");
+}
+
 setTimeout(() => {
     const itemDeleteButtons = document.querySelectorAll('.btn-delete');
     itemDeleteButtons.forEach((itemDeleteButton) => {

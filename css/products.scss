@@ -1,0 +1,132 @@
+footer {
+    margin-top: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "itemImage itemFunctions";
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: calc(100vw - 40px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    padding: 30px 0;
+
+    @media screen and (min-width: 1150px) {
+        width: 1150px;
+    }
+
+    @media screen and (max-width: 740px) {
+        grid-template-areas: 
+        "itemImage"
+        "itemFunctions";
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    #itemImage {
+        grid-area: itemImage;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        #imageCont {
+          background-color: rgb(26, 26, 26); 
+          border-radius: 1.5em;
+          width: 400px;
+          height: 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            height: 350px;
+            width: 350px;
+            object-fit: contain;
+          }
+          
+            @media screen and (max-width: 940px) {
+                margin-left: 20px;
+            }
+
+            @media screen and (max-width: 740px) {
+                width: 300px;
+                height: 300px;
+                margin-left: 0;
+
+                img {
+                    width: 270px;
+                    height: 270px;
+                }
+            }
+
+            @media screen and (max-width: 390px) {
+                width: 250px;
+                height: 250px;
+
+                img {
+                    width: 230px;
+                    height: 230px;
+                }
+            }
+          
+        }
+    }
+
+    #itemFunctions {
+        grid-area: itemFunctions;
+        font-family: Montserrat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        #functionsCont {
+            padding: 30px;
+            border-radius: 1.2em;
+            height: fit-content;
+
+            #itemTitle {
+                margin-bottom: 10px;
+            }
+
+            #itemDescription {
+                font-size: 15px;
+                li {
+                    list-style: none;
+                }
+                
+            }
+
+            #itemPrice {
+                margin-top: 10px;
+
+                i {
+                    color: white;
+                }
+            }
+
+            #addToCartCont {
+                margin-top: 7px;
+
+                #addToCart {
+                    border: 0;
+                    background-color: black;
+                    color: white;
+                    font-family: Montserrat;
+                    padding: 5px;
+                    border-radius: 8px;
+                }
+
+                #addToCart:hover {
+                    transform: scale(1.05);
+                }
+
+                #addToCart:active {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

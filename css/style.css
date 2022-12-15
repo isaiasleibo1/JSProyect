@@ -8,6 +8,10 @@
   font-family: "Montserrat";
   src: url(../fonts/Montserrat-Regular.ttf);
 }
+@font-face {
+  font-family: "Nexa";
+  src: url(../fonts/Nexa-Trial-Regular.ttf);
+}
 html {
   height: 100%;
 }
@@ -132,7 +136,7 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   margin: 0 5px;
   margin-top: 3px;
 }
-.itemsSubContainer.carouselSimple .itemsContainer .card .item .item-button-cart {
+.itemsSubContainer.carouselSimple .itemsContainer .card .item .ver-mas-button {
   margin: 0 auto;
   margin-top: auto;
   margin-bottom: 20px;
@@ -145,10 +149,10 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   padding: 5px;
   transition: all 200ms;
 }
-.itemsSubContainer.carouselSimple .itemsContainer .card .item .item-button-cart:hover {
+.itemsSubContainer.carouselSimple .itemsContainer .card .item .ver-mas-button:hover {
   transform: scale(1.05);
 }
-.itemsSubContainer.carouselSimple .itemsContainer .card .item .item-button-cart:active {
+.itemsSubContainer.carouselSimple .itemsContainer .card .item .ver-mas-button:active {
   transform: scale(0.97);
 }
 
@@ -202,9 +206,9 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   font-size: 1em;
   margin-left: 10px;
 }
-.itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .item-button-cart {
+.itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .ver-mas-button {
   margin: 0 auto;
-  margin-top: auto;
+  margin-top: 10px;
   margin-bottom: 20px;
   font-family: Montserrat;
   font-size: 13px;
@@ -215,10 +219,10 @@ header div#headerItemContainer #cartButtonContainer #cartButton {
   padding: 5px;
   transition: all 200ms;
 }
-.itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .item-button-cart:hover {
+.itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .ver-mas-button:hover {
   transform: scale(1.05);
 }
-.itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .item-button-cart:active {
+.itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .ver-mas-button:active {
   transform: scale(0.97);
 }
 .itemsSubContainer.carouselWithDescription .itemsContainer .card .item article {

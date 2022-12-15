@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <title>Ryzen 5 5600X</title>
+    <link rel="shortcut icon" href="../img/Ryzen 5 5600x.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+      
+      
+        <div id="headerItemContainer">
+          <div class="mobileMenuOpener headerItem">
+            <p>
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </p>
+          </div>
+          <div class="mobileMenuCloser headerItem">
+            <p>
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </p>
+          </div>
+          <div class="headerItem pageRedirect" onclick="location.href='../index.html'">
+            <p>
+              <i class="fa-solid fa-house" ></i>Inicio
+            </p>
+          </div>
+          <div class="headerItem pageRedirect">
+            <p>
+              <i class="fa-solid fa-user"></i>Sobre Nosotros
+            </p>
+          </div>
+          <div class="headerItem pageRedirect" onclick="location.href='../contacto.html'">
+            <p>
+              <i class="fa-solid fa-envelope"></i>Contacto
+            </p>
+          </div>
+          <div class="headerItem pageRedirect" onclick="location.href='../galeria.html'">
+            <p>
+              <i class="fa-solid fa-camera"></i>Galería
+            </p>
+          </div>
+          <!-- Cart Button Opener -->
+          <div id="cartButtonContainer" class="headerItem">
+            <div id="cartBubble"></div>
+            <div id="cartButton">
+              <p>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Cart -->
+    <div id="cart">
+      <div id="closeCart"><i class="fa-solid fa-xmark fa-lg"></i></div>
+      <div id="cartTitle"><h3>Carrito</h3></div>
+      <!-- Cart Empty -->
+      <div id="cartNothingPart">
+        <h2>No hay nada en su carrito.</h2>
+      </div>
+      <!-- Cart Items -->
+      <div id="cartItemsContainer"></div>
+      <!-- Cart Down Part (Buttons and Total) -->
+      <div id="cartDownPart">
+        <div id="cartArrows">
+          <h2 id="cartItemCounter">Items:</h2>
+          <div>
+            <button id="mostrarMenos">
+              <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+            <button id="mostrarMas">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div id="totalContainer">
+          <p id="totalText">Total</p>
+          <p id="shopping-cart-total">$0</p>
+          <button id="shopping-cart-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+      <div id="mobileMenu">
+        <div class="headerItem pageRedirect" onclick="location.href='../index.html'">
+          <p>
+            <i class="fa-solid fa-house"></i>Inicio
+          </p>
+        </div>
+        <div class="headerItem pageRedirect">
+          <p>
+            <i class="fa-solid fa-user"></i>Sobre Nosotros
+          </p>
+        </div>
+        <div class="headerItem pageRedirect" onclick="location.href='../contacto.html'">
+          <p>
+            <i class="fa-solid fa-envelope"></i>Contacto
+          </p>
+        </div>
+        <div class="headerItem pageRedirect" onclick="location.href='../galeria.html'">
+          <p>
+            <i class="fa-solid fa-camera"></i>Galería
+          </p>
+        </div>
+        
+      </div>
+
+      <main>
+        <div id="itemImage">
+            <div id="imageCont">
+                <img class="item-img" src="../img/Ryzen 5 5600x.png" alt="">
+            </div>
+        </div>
+        <div id="itemFunctions">
+            <div id="functionsCont">
+                <div id="itemTitleCont">
+                    <h1 id="itemTitle">Ryzen 5 5600X</h1>
+                </div>
+                <div id="itemDescriptionCont">
+                    <ul id="itemDescription">
+                        <li><b>Cantidad de núcleos:</b> 6</li>
+                        <li><b>Frecuencia:</b> 3,7 GHz</li> 
+                        <li><b>Caché L2:</b> 3 MB</li>
+                        <li><b>Caché L3:</b> 32 MB</li>
+                        <li><b>TDP:</b> 65 W</li>
+                        <li><b>Tipo de memoria:</b> DDR4</li>
+                        <li><b>Gráficos:</b> Ninguno</li>
+                    </ul>
+                </div>
+                <div id="itemPriceCont">
+                    <h2 id="itemPrice">$50990</h2>
+                </div>
+                <div id="addToCartCont">
+                  <button id="addToCart">Añadir al Carrito</button>
+                </div>
+                
+            </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="social-media">
+          <div class="social-media-app">
+            <img class="item-img" src="../img/instagram.webp">
+            <p>Instagram</p>
+          </div>
+          
+          <div class="social-media-app">
+            <img class="item-img" src="../img/facebook.png" alt="">
+            <p>Facebook</p>
+          </div>
+          <div class="social-media-app"> 
+            <img class="item-img" src="../img/whatsapp.webp" alt=""> 
+            <p>WhatsApp</p>
+          </div>
+        </div>
+      </footer>
+    
+
+    <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
+    <script src="../js/mobileMenu.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/addItemToCart.js"></script>
+</body>
+</html>

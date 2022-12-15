@@ -56,9 +56,9 @@
                     }
                 
                     // Add To Cart
-                    .item-button-cart {
+                    .ver-mas-button {
                         margin: 0 auto;
-                        margin-top: auto;
+                        margin-top: 10px;
                         margin-bottom: 20px;
                         font-family: Montserrat;
                         font-size: 13px;
@@ -69,10 +69,10 @@
                         padding: 5px;
                         transition: all 200ms;
                     }
-                    .item-button-cart:hover {
+                    .ver-mas-button:hover {
                         transform: scale(1.05);
                     }
-                    .item-button-cart:active {
+                    .ver-mas-button:active {
                         transform: scale(.97);
                     }
                 }

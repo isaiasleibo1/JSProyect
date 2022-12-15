@@ -1,4 +1,12 @@
-const itemToCartButtons = document.querySelectorAll('.item-button-cart');
+console.log('Atencón!!: Si la proporcón horizontal de la pantalla cambia la página será recargada');
+var windowWidth = window.innerWidth;
+setInterval(() => {
+    let windowWidthChecker = window.innerWidth;
+    if(windowWidth != windowWidthChecker) {
+        location.reload();
+    }
+}, 1000);
+
 const cartItemsContainer = document.querySelector('#cartItemsContainer');
 const cartBuyButton = document.querySelector('#shopping-cart-buy');
 cartItemsContainer.innerHTML = localStorage.getItem('cartStorage');
@@ -80,75 +88,6 @@ if (cartItems.length == 0) {
     
 }
 //
-
-
-// Botón de añadir item al carrito
-itemToCartButtons.forEach((itemToCartButton) => {
-    itemToCartButton.addEventListener('click', itemToCartButtonClicked);
-});
-
-function itemToCartButtonClicked(event) {
-    const button = event.target;
-    const item = button.closest('.item');
-
-    const itemTitle = item.querySelector('.item-title').textContent;
-    const itemPrice = item.querySelector('.item-price').textContent;
-    const itemImage = item.querySelector('.item-img').src;
-
-    addItemToCart(itemTitle, itemPrice, itemImage);
-}
-
-// Función para añadir item al carrito
-function addItemToCart(itemTitle, itemPrice, itemImage) {
-    const cartElementsTitle = cartItemsContainer.getElementsByClassName('shopping-cart-item-title');
-    for (let i = 0; i < cartElementsTitle.length; i++) {
-        if (cartElementsTitle[i].innerText === itemTitle) {
-            let cartElementQuantity = cartElementsTitle[i].parentElement.parentElement.parentElement.querySelector('.shopping-cart-quantity-input');
-
-            if (cartElementQuantity.value < 10) {
-                cartElementQuantity.value++;
-            }
-                
-            cartElementQuantity.parentElement.innerHTML = `<input class="shopping-cart-quantity-input" readonly="" type="number" value="${cartElementQuantity.value}">`;
-            
-            updateCartTotal();
-            return;
-        }
-    }
-
-    const createElement = document.createElement('div');
-    const elementContent = `
-    <div class="shoppingCartItem">
-        <img src=${itemImage} class="shopping-cart-image">
-        <div>
-            <h3 class="shopping-cart-item-title">${itemTitle}</h3>
-        </div>
-        <div class="price">
-            <p class="shopping-cart-item-price">${itemPrice}</p>
-        </div>
-        <div class="input-container">
-            <input class="shopping-cart-quantity-input" readonly type="number" value="1">
-        </div>
-        <div>
-            <div class="moreValueInput">
-                <i class="fa fa-plus fa-2xs" aria-hidden="true"></i>
-            </div>
-            <div class="lessValueInput">
-                <i class="fa fa-minus fa-2xs" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div>
-            <button class="btn-delete" type="button"><i class="fa-solid fa-x"></i></button>
-        </div>
-    </div>`;
-
-    createElement.innerHTML = elementContent;
-    cartItemsContainer.append(createElement);
-
-    const itemDeleteButton = createElement.querySelector('.btn-delete');
-      
-    updateCartTotal();
-}
 
 // Actualizar el carrito
 function updateCartTotal() {
@@ -281,20 +220,22 @@ cartButton.addEventListener('click', cartButtonClicked);
 function cartButtonClicked() {
     cartButton.removeEventListener('click', cartButtonClicked);
     const cart = document.querySelector('#cart');
-    let visualWidth = window.innerWidth;
+    let visualWidth = window.outerWidth;
 
     if (visualWidth <= 620) {
         const cartItems = document.querySelectorAll('.shoppingCartItem');
         if (cartItems.length == 0) {
             alert('Por favor seleccione un producto.');
         } else if (cartItems.length >= 1) {
-            window.open("./mobileCart.html", "_self");
+            const pathname = window.location.pathname;
+            const pathnameChecker = pathname.includes('products');
+            if (pathnameChecker == true) {
+                window.open("../mobileCart.html", "_self")
+            } else {
+                window.open("./mobileCart.html", "_self");
+            }
         }
-
-
-
-
-        
+            
     } else if (visualWidth > 620) {
         if (cart.style.animationName == 'cartClose') {
             cart.style.animationName = 'cartOpen';

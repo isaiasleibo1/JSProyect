@@ -1,0 +1,120 @@
+footer {
+  margin-top: 16px;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "itemImage itemFunctions";
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: calc(100vw - 40px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  padding: 30px 0;
+}
+@media screen and (min-width: 1150px) {
+  main {
+    width: 1150px;
+  }
+}
+@media screen and (max-width: 740px) {
+  main {
+    grid-template-areas: "itemImage" "itemFunctions";
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+main #itemImage {
+  grid-area: itemImage;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #itemImage #imageCont {
+  background-color: rgb(26, 26, 26);
+  border-radius: 1.5em;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #itemImage #imageCont img {
+  height: 350px;
+  width: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 940px) {
+  main #itemImage #imageCont {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 740px) {
+  main #itemImage #imageCont {
+    width: 300px;
+    height: 300px;
+    margin-left: 0;
+  }
+  main #itemImage #imageCont img {
+    width: 270px;
+    height: 270px;
+  }
+}
+@media screen and (max-width: 390px) {
+  main #itemImage #imageCont {
+    width: 250px;
+    height: 250px;
+  }
+  main #itemImage #imageCont img {
+    width: 230px;
+    height: 230px;
+  }
+}
+main #itemFunctions {
+  grid-area: itemFunctions;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #itemFunctions #functionsCont {
+  padding: 30px;
+  border-radius: 1.2em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main #itemFunctions #functionsCont #itemTitle {
+  margin-bottom: 10px;
+}
+main #itemFunctions #functionsCont #itemDescription {
+  font-size: 15px;
+}
+main #itemFunctions #functionsCont #itemDescription li {
+  list-style: none;
+}
+main #itemFunctions #functionsCont #itemPrice {
+  margin-top: 10px;
+}
+main #itemFunctions #functionsCont #itemPrice i {
+  color: white;
+}
+main #itemFunctions #functionsCont #addToCartCont {
+  margin-top: 7px;
+}
+main #itemFunctions #functionsCont #addToCartCont #addToCart {
+  border: 0;
+  background-color: black;
+  color: white;
+  font-family: Montserrat;
+  padding: 5px;
+  border-radius: 8px;
+}
+main #itemFunctions #functionsCont #addToCartCont #addToCart:hover {
+  transform: scale(1.05);
+}
+main #itemFunctions #functionsCont #addToCartCont #addToCart:active {
+  transform: scale(1);
+}/*# sourceMappingURL=products.css.map */
