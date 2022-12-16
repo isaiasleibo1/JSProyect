@@ -4,13 +4,13 @@ cartMain.innerHTML = localStorage.getItem('cartStorage');
 setInterval(() => {
     let windowWidthChecker = window.innerWidth;
     if (windowWidthChecker > 620) {
-        window.open("./index.html", "_self");
+        window.open(".", "_self");
     }
 }, 1000);
 
 const cartItems2 = document.querySelectorAll('.shoppingCartItem');
 if (cartItems2.length <= 0) {
-    window.open("./index.html", "_self");
+    window.open(".", "_self");
 }
 
 setTimeout(() => {
@@ -66,7 +66,7 @@ function itemDeleteButtonClicked(event) {
     
     if (cartItems.length == 0) {
         setTimeout(() => {
-            window.open("./index.html", "_self");
+            window.open("./", "_self");
         }, 100)
     }
     

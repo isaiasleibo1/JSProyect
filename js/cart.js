@@ -197,9 +197,9 @@ function cartButtonClicked() {
             const pathname = window.location.pathname;
             const pathnameChecker = pathname.includes('products');
             if (pathnameChecker == true) {
-                window.open("../mobileCart.html", "_self")
+                window.open("../mobileCart", "_self")
             } else {
-                window.open("./mobileCart.html", "_self");
+                window.open("./mobileCart", "_self");
             }
         }
             
