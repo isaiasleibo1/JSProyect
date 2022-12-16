@@ -1,35 +1,40 @@
+#mobileHeader {
+    margin-bottom: 0;
+}
+
 #mobileMain {
     display: flex;
     flex-direction: column;
+    
 }
 
 #cartMain {
     display: grid;
     justify-items: center;
+    height: fit-content;
+    max-height: calc(100vh - 87px - 50px - 40px);
+    overflow-x: scroll;
 
     .shoppingCartItem {
-        margin: 10px 0;
-        width: 400px;
-        background-color: black;
+        margin: 7px 0;
+        background-color: rgb(32, 32, 32);
         color: white;
         border-radius: 1em;
         display: grid;
         grid-template-areas: 
-        "img title"
-        "img price"
-        "img input"
-        "img value"
-        "img delete";
-        grid-template-columns: 200px 1fr;
-        box-shadow: 5px 5px 5px #424242, -5px -5px 5px #919191;
-           
-           
+        "img title price"
+        "input value delete";
+        width: 370px;
+        grid-template-columns: 60px 1fr 80px;
+        padding: 10px;
+        padding-bottom: 2px;
+        align-items: center;
 
         .shopping-cart-image {
-            width: 180px;
-            height: 180px;
-            background-color: rgb(48, 48, 48);
-            padding: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            padding: 5px;
             margin: 0 auto;
             border-radius: 1em;
             object-fit: contain;
@@ -38,36 +43,25 @@
             left: 0;
         }
         
-        
-
-        .shopping-cart-item-title {
-            text-align: center;
-            margin: 0 10px;
-            margin-top: 7px;
-        }
-        
-        @media screen and (max-width: 480px) {
-            .shopping-cart-image {
-                width: 150px;
-                height: 150px;
-            }
+        :nth-child(2) {
+            grid-area: title;
 
             .shopping-cart-item-title {
+                text-align: center;
                 font-size: 16px;
+                margin: 0 10px;
             }
-            
-            width: 370px;
-            grid-template-columns: 170px 1fr;
         }
 
         .price {
             text-align: center;
+            grid-area: price;
         }
 
         .input-container {
             width: fit-content;
-            margin: 0 auto;
-            margin-top: 5px; 
+            margin: 8px auto;
+            grid-area: input;
 
             .shopping-cart-quantity-input {
                 width: 30px;
@@ -87,6 +81,8 @@
             width: fit-content;
             margin: 0 auto;
             margin-top: 5px;
+            grid-area: value;
+            margin-left: auto;
 
             .moreValueInput {
                 background: linear-gradient(rgb(28, 138, 0), rgb(0, 185, 114));
@@ -122,6 +118,7 @@
             margin: 0 auto;
             width: fit-content;
             padding: 7px;
+            grid-area: delete;
 
             .btn-delete {
                 width: 50px;
@@ -145,10 +142,12 @@
         }
 
         @media screen and (max-width: 420px) {
-            .shopping-cart-image {
-                width: 130px;
-                height: 130px;
-            }
+
+            grid-template-areas: 
+            "img title title"
+            "img price price"
+            "input value delete";
+            grid-template-columns: 60px 1fr 64px !important;
 
             .shopping-cart-item-title {
                 font-size: 14px;
@@ -173,24 +172,22 @@
             }
             
             width: 310px;
-            grid-template-columns: 150px 1fr;
-        }        
+        } 
+        
+        @media screen and (max-width: 335px) {
+            width: 290px !important;
+        }
     }
 }
 
 #mobileTotalContainer {
-    background: linear-gradient(rgb(0, 0, 68), rgb(0, 0, 100));
-    border: 2px solid white;
-    box-shadow: rgba(50, 50, 93) 0px 50px 100px -20px, rgba(0, 0, 0) 0px 30px 60px -30px;
+    background: #252525;
     color: white;
-    width: fit-content;
-    right: -2px;
-    padding: 1em;
-    border-bottom-left-radius: 1em;
-    border-top-left-radius: 1em;
+    width: 100vw;
+    padding: 1em 0;
+    bottom: 50px;
     text-align: center;
     position: fixed;
-    bottom: 42px;
     font-size: 14px;
 
     #shopping-cart-total {
@@ -199,5 +196,25 @@
 
     #buyButton {
         margin-top: 5px;
+        border: 0;
+        background-color: white;
+        font-family: Montserrat;
+        font-weight: bolder;
+        padding: 5px;
+        border-radius: 8px;
     }
+
+    #buyButton:hover {
+        transform: scale(1.05);
+    }
+
+    #buyButton:active {
+        transform: scale(1);
+    }
+}
+
+#mobileFooter {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
 }

@@ -101,6 +101,17 @@ main #itemFunctions #functionsCont #itemPrice {
 main #itemFunctions #functionsCont #itemPrice i {
   color: white;
 }
+@media screen and (max-width: 740px) {
+  main #itemFunctions #functionsCont #itemTitle {
+    font-size: 25px;
+  }
+  main #itemFunctions #functionsCont #itemDescription {
+    font-size: 13px;
+  }
+  main #itemFunctions #functionsCont #itemPrice {
+    font-size: 20px;
+  }
+}
 main #itemFunctions #functionsCont #addToCartCont {
   margin-top: 7px;
 }

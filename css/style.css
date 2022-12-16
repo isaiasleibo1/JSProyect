@@ -1026,6 +1026,10 @@ div#mobileMenu div.headerItem p .fa-solid {
   transform: scale(1);
 }
 
+#mobileHeader {
+  margin-bottom: 0;
+}
+
 #mobileMain {
   display: flex;
   flex-direction: column;
@@ -1034,23 +1038,30 @@ div#mobileMenu div.headerItem p .fa-solid {
 #cartMain {
   display: grid;
   justify-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: calc(100vh - 87px - 50px - 40px);
+  overflow-x: scroll;
 }
 #cartMain .shoppingCartItem {
-  margin: 10px 0;
-  width: 400px;
-  background-color: black;
+  margin: 7px 0;
+  background-color: rgb(32, 32, 32);
   color: white;
   border-radius: 1em;
   display: grid;
-  grid-template-areas: "img title" "img price" "img input" "img value" "img delete";
-  grid-template-columns: 200px 1fr;
-  box-shadow: 5px 5px 5px #424242, -5px -5px 5px #919191;
+  grid-template-areas: "img title price" "input value delete";
+  width: 370px;
+  grid-template-columns: 60px 1fr 80px;
+  padding: 10px;
+  padding-bottom: 2px;
+  align-items: center;
 }
 #cartMain .shoppingCartItem .shopping-cart-image {
-  width: 180px;
-  height: 180px;
-  background-color: rgb(48, 48, 48);
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  padding: 5px;
   margin: 0 auto;
   border-radius: 1em;
   -o-object-fit: contain;
@@ -1059,33 +1070,24 @@ div#mobileMenu div.headerItem p .fa-solid {
   position: relative;
   left: 0;
 }
-#cartMain .shoppingCartItem .shopping-cart-item-title {
-  text-align: center;
-  margin: 0 10px;
-  margin-top: 7px;
+#cartMain .shoppingCartItem :nth-child(2) {
+  grid-area: title;
 }
-@media screen and (max-width: 480px) {
-  #cartMain .shoppingCartItem {
-    width: 370px;
-    grid-template-columns: 170px 1fr;
-  }
-  #cartMain .shoppingCartItem .shopping-cart-image {
-    width: 150px;
-    height: 150px;
-  }
-  #cartMain .shoppingCartItem .shopping-cart-item-title {
-    font-size: 16px;
-  }
+#cartMain .shoppingCartItem :nth-child(2) .shopping-cart-item-title {
+  text-align: center;
+  font-size: 16px;
+  margin: 0 10px;
 }
 #cartMain .shoppingCartItem .price {
   text-align: center;
+  grid-area: price;
 }
 #cartMain .shoppingCartItem .input-container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
-  margin-top: 5px;
+  margin: 8px auto;
+  grid-area: input;
 }
 #cartMain .shoppingCartItem .input-container .shopping-cart-quantity-input {
   width: 30px;
@@ -1105,6 +1107,8 @@ div#mobileMenu div.headerItem p .fa-solid {
   width: fit-content;
   margin: 0 auto;
   margin-top: 5px;
+  grid-area: value;
+  margin-left: auto;
 }
 #cartMain .shoppingCartItem :nth-child(5) .moreValueInput, #cartMain .shoppingCartItem :nth-child(5) .lessValueInput {
   background: linear-gradient(rgb(28, 138, 0), rgb(0, 185, 114));
@@ -1138,6 +1142,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   width: -moz-fit-content;
   width: fit-content;
   padding: 7px;
+  grid-area: delete;
 }
 #cartMain .shoppingCartItem :nth-child(6) .btn-delete {
   width: 50px;
@@ -1158,12 +1163,9 @@ div#mobileMenu div.headerItem p .fa-solid {
 }
 @media screen and (max-width: 420px) {
   #cartMain .shoppingCartItem {
+    grid-template-areas: "img title title" "img price price" "input value delete";
+    grid-template-columns: 60px 1fr 64px !important;
     width: 310px;
-    grid-template-columns: 150px 1fr;
-  }
-  #cartMain .shoppingCartItem .shopping-cart-image {
-    width: 130px;
-    height: 130px;
   }
   #cartMain .shoppingCartItem .shopping-cart-item-title {
     font-size: 14px;
@@ -1183,22 +1185,20 @@ div#mobileMenu div.headerItem p .fa-solid {
     height: 17px !important;
   }
 }
+@media screen and (max-width: 335px) {
+  #cartMain .shoppingCartItem {
+    width: 290px !important;
+  }
+}
 
 #mobileTotalContainer {
-  background: linear-gradient(rgb(0, 0, 68), rgb(0, 0, 100));
-  border: 2px solid white;
-  box-shadow: rgb(50, 50, 93) 0px 50px 100px -20px, rgb(0, 0, 0) 0px 30px 60px -30px;
+  background: #252525;
   color: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  right: -2px;
-  padding: 1em;
-  border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;
+  width: 100vw;
+  padding: 1em 0;
+  bottom: 50px;
   text-align: center;
   position: fixed;
-  bottom: 42px;
   font-size: 14px;
 }
 #mobileTotalContainer #shopping-cart-total {
@@ -1206,4 +1206,22 @@ div#mobileMenu div.headerItem p .fa-solid {
 }
 #mobileTotalContainer #buyButton {
   margin-top: 5px;
+  border: 0;
+  background-color: white;
+  font-family: Montserrat;
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 8px;
+}
+#mobileTotalContainer #buyButton:hover {
+  transform: scale(1.05);
+}
+#mobileTotalContainer #buyButton:active {
+  transform: scale(1);
+}
+
+#mobileFooter {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

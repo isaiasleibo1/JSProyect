@@ -107,6 +107,20 @@ main {
                 }
             }
 
+            @media screen and (max-width: 740px) {
+                #itemTitle {
+                    font-size: 25px;
+                }
+
+                #itemDescription {
+                    font-size: 13px;
+                }
+
+                #itemPrice {
+                    font-size: 20px;
+                }
+            }
+
             #addToCartCont {
                 margin-top: 7px;
 

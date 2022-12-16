@@ -58,6 +58,41 @@
         </div>
       </header>
 
+      <div id="cart">
+        <div id="closeCart">
+          <i class="fa-solid fa-xmark fa-lg"></i>
+        </div>
+        <div id="cartTitle">
+          <h3>Carrito</h3>
+        </div>
+        <!-- texto carrito vacío -->
+        <div id="cartNothingPart">
+          <h2>No hay nada en su carrito.</h2>
+        </div>
+        <!-- Items del carrito -->
+        <div id="cartItemsContainer"></div>
+        <!-- Parte de abajo del carrito -->
+        <div id="cartDownPart">
+          <div id="cartArrows">
+            <h2 id="cartItemCounter">Items:</h2>
+            <div>
+              <button id="mostrarMenos">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+              </button>
+              <button id="mostrarMas">
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Total del carrito -->
+          <div id="totalContainer">
+            <p id="totalText">Total</p>
+            <p id="shopping-cart-total">$0</p>
+            <button id="shopping-cart-buy">Comprar</button>
+          </div>
+        </div>
+      </div>
+
       <div id="mobileMenu">
         <div class="headerItem pageRedirect" onclick="location.href='..'">
           <p>
