@@ -1,15 +1,8 @@
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
 
-console.log('Atencón!!: Si la proporcón horizontal de la pantalla cambia la página será recargada');
-
-var windowWidth = window.innerWidth;
 setInterval(() => {
     let windowWidthChecker = window.innerWidth;
-    if(windowWidth != windowWidthChecker) {
-        location.reload();
-    }
-
     if (windowWidthChecker > 620) {
         window.open("./index.html", "_self");
     }

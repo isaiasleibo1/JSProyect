@@ -1,0 +1,220 @@
+// Carousel (Simple)
+.itemsSubContainer.carouselSimple {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+    // Items Container
+    .itemsContainer {
+        border-radius: 1em;
+        background: linear-gradient(rgb(204, 204, 204), rgb(255, 255, 255));
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+        width: 1280px;
+        scroll-behavior: smooth;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+        // Item container
+        .card {
+            background-color: rgb(37, 37, 37);
+            margin: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+
+            // Item
+            .item {
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+
+                // Image
+                img {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                }
+                
+                // Title
+                .item-title {
+                    font-weight: 100;
+                    font-size: 1em;
+                    margin: 0 5px;
+                    margin-top: 3px;
+                }
+                
+                // Add To Cart
+                .ver-mas-button {
+                    margin: 0 auto;
+                    margin-top: auto;
+                    margin-bottom: 20px;
+                    font-family: Montserrat;
+                    font-size: 13px;
+                    border-radius: 8px;
+                    background-color: white;
+                    font-weight: bolder;
+                    border: 0;
+                    padding: 5px;
+                    transition: all 200ms;
+                }
+                .ver-mas-button:hover {
+                    transform: scale(1.05);
+                }
+                .ver-mas-button:active {
+                    transform: scale(.97);
+                }
+            }
+        }
+
+        
+        @media screen and (max-width: 1480px) {
+            width: 1120px !important;
+        }
+            
+        @media screen and (max-width: 1290px) {
+            width: 960px !important;
+        }
+        
+        @media screen and (max-width: 1150px) {
+            width: 800px !important;
+        }
+            
+        @media screen and (max-width: 980px) {
+            width: 640px !important;  
+        }
+            
+        @media screen and (max-width: 820px) {
+            .carouselContainer {
+                margin: 0 !important;
+            }
+            
+                overflow-x: scroll !important;
+                margin: 0 auto !important;
+            
+            .scrollLeftSimple {
+                display: none;
+            }
+            
+            .scrollRightSimple {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            width: 480px !important;
+        }
+        
+        @media screen and (max-width: 530px) {
+            width: 100vw !important;
+            border-radius: 0 !important;
+        
+            .card {
+                width: 33.3333vw;
+
+                .item {
+                    width: calc(25vw - 20px) !important;
+                    height: 41vw !important;
+                        
+                    .item-price {
+                        font-size: 20px !important;
+                    }
+        
+                    .item-title {
+                        font-size: 10px !important;
+                    }
+        
+                    .ver-mas-button {
+                        font-size: 10px !important;
+                    }
+        
+                    img {
+                        width: 80px !important;
+                        height: 80px !important;
+                        margin: 10px auto !important;
+                    }
+                }
+            }
+        }
+        
+        @media screen and (max-width: 490px) {
+            .card {
+                .item {
+                    height: 42vw !important;
+                }
+            } 
+        }
+        
+        @media screen and (max-width: 474px) {
+            .card {
+                .item {
+                    height: 46vw !important;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 436px) {
+            .card {
+                width: 33.3333vw;
+
+                .item {
+                    width: calc(33.3333vw - 20px) !important;
+                    height: 50vw !important;
+                }
+            }            
+        }
+            
+        @media screen and (max-width: 400px) {
+            .card {
+                .item {
+                    height: 54vw !important;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .card {
+                .item {
+                    img {
+                        width: 72px !important; 
+                        height: 72px !important;
+                    }
+                }
+            }
+        }
+        
+        @media screen and (max-width: 360px) {
+            .card {
+                .item {
+                    height: 56vw !important;
+            
+                    .ver-mas-button {
+                        margin-bottom: 10px !important;
+                    }
+                    .item-price {
+                        font-size: 18px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 820px) {
+        .carouselContainer {
+            margin: 0 !important;
+        }
+        
+        .scrollLeftSimple {
+            display: none;
+        }
+        
+        .scrollRightSimple {
+            display: none;
+        }
+    }
+}

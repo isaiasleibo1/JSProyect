@@ -1,57 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Título -->
     <title>Carrito</title>
-</head>
-<body>
-    <header>
-        <div id="headerItemContainer">
-          <div class="mobileMenuOpener headerItem">
-            <p>
-              <i class="fa-solid fa-bars fa-xl"></i>
-            </p>
-          </div>
-          <div class="mobileMenuCloser headerItem">
-            <p>
-              <i class="fa-solid fa-xmark fa-xl"></i>
-            </p>
-          </div>
-          <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
-            <p>
-              <i class="fa-solid fa-house"></i>Inicio
-            </p>
-          </div>
-          <div class="headerItem pageRedirect">
-            <p>
-              <i class="fa-solid fa-user"></i>Sobre Nosotros
-            </p>
-          </div>
-          <div class="headerItem pageRedirect" onclick="location.href='./contacto.html'">
-            <p>
-              <i class="fa-solid fa-envelope"></i>Contacto
-            </p>
-          </div>
-          <div class="headerItem pageRedirect">
-            <p>
-              <i class="fa-solid fa-camera"></i>Galería
-            </p>
-          </div>
-          <div id="cartButtonContainer" class="headerItem">
-            <div id="cartBubble"></div>
-            <div>
-              <p>
-                <i class="fa-solid fa-cart-shopping"></i>
-              </p>
-            </div>
-          </div>
-        </div>
-    </header>
+  </head>
 
-    <div id="mobileMenu">
+  <body>
+
+    <header>
+      <div id="headerItemContainer">
+        <div class="mobileMenuOpener headerItem">
+          <p>
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </p>
+        </div>
+        <div class="mobileMenuCloser headerItem">
+          <p>
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </p>
+        </div>
         <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
           <p>
             <i class="fa-solid fa-house"></i>Inicio
@@ -67,48 +39,77 @@
             <i class="fa-solid fa-envelope"></i>Contacto
           </p>
         </div>
-        <div class="headerItem pageRedirect" onclick="location.href='./galeria.html'">
+        <div class="headerItem pageRedirect">
           <p>
             <i class="fa-solid fa-camera"></i>Galería
           </p>
         </div>
+        <div id="cartButtonContainer" class="headerItem">
+          <div id="cartBubble"></div>
+          <div>
+            <p>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </p>
+          </div>
+        </div>
       </div>
+    </header>
 
-      <main id="mobileMain">
-        <div id="cartNothingPart"></div>
-        <div id="cartMain">
+    <!-- Menu header para celulares -->
+    <div id="mobileMenu">
+      <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
+        <p>
+          <i class="fa-solid fa-house"></i>Inicio
+        </p>
+      </div>
+      <div class="headerItem pageRedirect">
+        <p>
+          <i class="fa-solid fa-user"></i>Sobre Nosotros
+        </p>
+      </div>
+      <div class="headerItem pageRedirect" onclick="location.href='./contacto.html'">
+        <p>
+          <i class="fa-solid fa-envelope"></i>Contacto
+        </p>
+      </div>
+      <div class="headerItem pageRedirect" onclick="location.href='./galeria.html'">
+        <p>
+          <i class="fa-solid fa-camera"></i>Galería
+        </p>
+      </div>
+    </div>
 
+    <main id="mobileMain">
+      <div id="cartNothingPart"></div>
+      <div id="cartMain"></div>
+      <div id="mobileTotalContainer">
+        <h3>Total</h3>
+        <div id="shopping-cart-total"></div>
+        <button id="buyButton">Comprar</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-media">
+        <div class="social-media-app">
+          <img class="item-img" src="./img/instagram.webp">
+          <p>Instagram</p>
         </div>
-        <div id="mobileTotalContainer">
-          <h3>Total</h3>
-          <div id="shopping-cart-total"></div>
-          <button id="buyButton">Comprar</button>
+        <div class="social-media-app">
+          <img class="item-img" src="./img/facebook.png" alt="">
+          <p>Facebook</p>
         </div>
-        
-
-      </main>
-
-
-      <footer>
-        <div class="social-media">
-          <div class="social-media-app">
-            <img class="item-img" src="./img/instagram.webp">
-            <p>Instagram</p>
-          </div>
-          
-          <div class="social-media-app">
-            <img class="item-img" src="./img/facebook.png" alt="">
-            <p>Facebook</p>
-          </div>
-          <div class="social-media-app"> 
-            <img class="item-img" src="./img/whatsapp.webp" alt=""> 
-            <p>WhatsApp</p>
-          </div>
+        <div class="social-media-app">
+          <img class="item-img" src="./img/whatsapp.webp" alt="">
+          <p>WhatsApp</p>
         </div>
-      </footer>
+      </div>
+    </footer>
 
+    <script src="./js/refreshPage.js"></script>
     <script src="./js/mobileMenu.js"></script>
     <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
     <script src="./js/mobileCart.js"></script>
-</body>
+    
+  </body>
 </html>

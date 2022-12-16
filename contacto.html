@@ -1,87 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Título -->
     <title>Contacto</title>
-</head>
-<body>
-    <header id="formheader">
-        <div id="headerItemContainer">
-          <div class="mobileMenuOpener headerItem">
-            <p>
-              <i class="fa-solid fa-bars fa-xl"></i>
-            </p>
-          </div>
-          <div class="mobileMenuCloser headerItem">
-            <p>
-              <i class="fa-solid fa-xmark fa-xl"></i>
-            </p>
-          </div>
-          <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
-            <p>
-              <i class="fa-solid fa-house"></i>Inicio
-            </p>
-          </div>
-          <div class="headerItem pageRedirect">
-            <p>
-              <i class="fa-solid fa-user"></i>Sobre Nosotros
-            </p>
-          </div>
-          <div class="headerItem pageRedirect">
-            <p>
-              <i class="fa-solid fa-envelope"></i>Contacto
-            </p>
-          </div>
-          <div class="headerItem pageRedirect" onclick="location.href='./galeria.html'">
-            <p>
-              <i class="fa-solid fa-camera"></i>Galería
-            </p>
-          </div>
-          <!-- Cart Button Opener -->
-          <div id="cartButtonContainer" class="headerItem">
-            <div id="cartBubble"></div>
-            <div id="cartButton">
-              <p>
-                <i class="fa-solid fa-cart-shopping"></i>
-              </p>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- Cart -->
-    <div id="cart">
-      <div id="closeCart"><i class="fa-solid fa-xmark fa-lg"></i></div>
-        <!-- Cart Empty -->
-        <div id="cartNothingPart">
-          <h2>No hay nada en su carrito.</h2>
-        </div>
-        <!-- Cart Items -->
-        <div id="cartItemsContainer"></div>
-        <!-- Cart Down Part (Buttons and Total) -->
-        <div id="cartDownPart">
-          <div id="cartArrows">
-            <h2 id="cartItemCounter">Items:</h2>
-            <div>
-              <button id="mostrarMenos">
-                <i class="fa fa-arrow-up" aria-hidden="true"></i>
-              </button>
-              <button id="mostrarMas">
-                <i class="fa fa-arrow-down" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-          <div id="totalContainer">
-            <p id="totalText">Total</p>
-            <p id="shopping-cart-total">$0</p>
-            <button id="shopping-cart-buy">Comprar</button>
-          </div>
-        </div>
-      </div>
+  </head>
 
-      <div id="mobileMenu">
+  <body>
+
+    <header id="formheader">
+      <div id="headerItemContainer">
+        <div class="mobileMenuOpener headerItem">
+          <p>
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </p>
+        </div>
+        <div class="mobileMenuCloser headerItem">
+          <p>
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </p>
+        </div>
         <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
           <p>
             <i class="fa-solid fa-house"></i>Inicio
@@ -92,7 +34,7 @@
             <i class="fa-solid fa-user"></i>Sobre Nosotros
           </p>
         </div>
-        <div class="headerItem pageRedirect" onclick="location.href='./contacto.html'">
+        <div class="headerItem pageRedirect">
           <p>
             <i class="fa-solid fa-envelope"></i>Contacto
           </p>
@@ -102,26 +44,92 @@
             <i class="fa-solid fa-camera"></i>Galería
           </p>
         </div>
-        
-      </div>
-
-      <main id="formmain">
-        <div id="form">
-          <form action="https://formspree.io/f/mvoyewzv" method="post">
-            <label for="nombre">Nombre</label>
-            <input class="forminput" type="text" name="nombre" id="nombre" autocomplete="off" required>
-            <label for="apellido">Apellido</label>
-            <input class="forminput" type="text" name="apellido" id="apellido" autocomplete="off" required>
-            <label for="email">E-Mail</label>
-            <input class="forminput" type="email" autocomplete="off" id="email" required>
-            <label for="comentario">Comentario</label>
-            <textarea name="comentario" id="comentario" cols="35" rows="12" required></textarea>
-            <button type="submit" name="enviar" id="enviar">Enviar</button>
-          </form>
+        <!-- Botón abrir carrito -->
+        <div id="cartButtonContainer" class="headerItem">
+          <div id="cartBubble"></div>
+          <div id="cartButton">
+            <p>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </p>
+          </div>
         </div>
-      </main>
+      </div>
+    </header>
 
+    <!-- Carrito -->
+    <div id="cart">
+      <div id="closeCart">
+        <i class="fa-solid fa-xmark fa-lg"></i>
+      </div>
+      <!-- Carrito texto vacío -->
+      <div id="cartNothingPart">
+        <h2>No hay nada en su carrito.</h2>
+      </div>
+      <!-- Items del carrito -->
+      <div id="cartItemsContainer"></div>
+      <!-- Parte de abajo del carrito -->
+      <div id="cartDownPart">
+        <div id="cartArrows">
+          <h2 id="cartItemCounter">Items:</h2>
+          <div>
+            <button id="mostrarMenos">
+              <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+            <button id="mostrarMas">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Total del carrito -->
+        <div id="totalContainer">
+          <p id="totalText">Total</p>
+          <p id="shopping-cart-total">$0</p>
+          <button id="shopping-cart-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú header para celulares -->
+    <div id="mobileMenu">
+      <div class="headerItem pageRedirect" onclick="location.href='./index.html'">
+        <p>
+          <i class="fa-solid fa-house"></i>Inicio
+        </p>
+      </div>
+      <div class="headerItem pageRedirect">
+        <p>
+          <i class="fa-solid fa-user"></i>Sobre Nosotros
+        </p>
+      </div>
+      <div class="headerItem pageRedirect" onclick="location.href='./contacto.html'">
+        <p>
+          <i class="fa-solid fa-envelope"></i>Contacto
+        </p>
+      </div>
+      <div class="headerItem pageRedirect" onclick="location.href='./galeria.html'">
+        <p>
+          <i class="fa-solid fa-camera"></i>Galería
+        </p>
+      </div>
+    </div>
+
+    <main id="formmain">
+      <!-- Formulario -->
+      <div id="form">
+        <form action="https://formspree.io/f/mvoyewzv" method="post">
+          <label for="nombre">Nombre</label>
+          <input class="forminput" type="text" name="nombre" id="nombre" autocomplete="off" required>
+          <label for="apellido">Apellido</label>
+          <input class="forminput" type="text" name="apellido" id="apellido" autocomplete="off" required>
+          <label for="email">E-Mail</label>
+          <input class="forminput" type="email" autocomplete="off" id="email" required>
+          <label for="comentario">Comentario</label>
+          <textarea name="comentario" id="comentario" cols="35" rows="12" required></textarea>
+          <button type="submit" name="enviar" id="enviar">Enviar</button>
+        </form>
+      </div>
       <script>
+        // Esta script comprueba los campos del formulario y recarga la página
         const submitButton = document.querySelector('#enviar');
         submitButton.addEventListener('click', submitButtonClicked);
 
@@ -130,41 +138,38 @@
           const apellido = document.querySelector('#apellido');
           const email = document.querySelector('#email');
           const comentario = document.querySelector('#comentario');
-          
-
-          if(nombre.value != "" && apellido.value != "" && email.value != "" && email.value.indexOf('@') >= 0 && email.value.indexOf('.') >= 0 && comentario.value != "") {
+          if (nombre.value != "" && apellido.value != "" && email.value != "" && email.value.indexOf('@') >= 0 && email.value.indexOf('.') >= 0 && comentario.value != "") {
             console.log('Todos los valores coinciden');
             setTimeout(() => {
               document.querySelector('form').reset();
               docuent.querySelector('textarea').reset();
             }, 500)
-            
           }
-
-            
         };
       </script>
-      
-      <footer>
-        <div class="social-media">
-          <div class="social-media-app">
-            <img class="item-img" src="./img/instagram.webp">
-            <p>Instagram</p>
-          </div>
-          
-          <div class="social-media-app">
-            <img class="item-img" src="./img/facebook.png" alt="">
-            <p>Facebook</p>
-          </div>
-          <div class="social-media-app"> 
-            <img class="item-img" src="./img/whatsapp.webp" alt=""> 
-            <p>WhatsApp</p>
-          </div>
-        </div>
-      </footer>
+    </main>
 
-      <script src="./js/cart.js"></script>
-      <script src="./js/mobileMenu.js"></script>
-      <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
-</body>
+    <footer>
+      <div class="social-media">
+        <div class="social-media-app">
+          <img class="item-img" src="./img/instagram.webp">
+          <p>Instagram</p>
+        </div>
+        <div class="social-media-app">
+          <img class="item-img" src="./img/facebook.png" alt="">
+          <p>Facebook</p>
+        </div>
+        <div class="social-media-app">
+          <img class="item-img" src="./img/whatsapp.webp" alt="">
+          <p>WhatsApp</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/refreshPage.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/mobileMenu.js"></script>
+    <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
+    
+  </body>
 </html>

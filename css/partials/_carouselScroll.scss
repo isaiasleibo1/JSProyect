@@ -10,12 +10,15 @@
     border-radius: 50%;
     transition: all 200ms;
 }
+
 .scrollR:hover {
     transform: scale(1.05);
 }
+
 .scrollR:active {
     transform: scale(1);
 }
+
 .scrollL {
     @extend .scrollR;
     margin-left: 0;

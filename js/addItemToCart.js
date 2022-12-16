@@ -1,6 +1,5 @@
 const itemToCartButton = document.querySelector('#addToCart');
 
-// Botón de añadir item al carrito
 itemToCartButton.addEventListener('click', itemToCartButtonClicked);
 
 function itemToCartButtonClicked(event) {
@@ -14,9 +13,9 @@ function itemToCartButtonClicked(event) {
     addItemToCart(itemTitle, itemPrice, itemImage);
 }
 
-// Función para añadir item al carrito
 function addItemToCart(itemTitle, itemPrice, itemImage) {
-    const cartElementsTitle = cartItemsContainer.getElementsByClassName('shopping-cart-item-title');
+    let cartElementsTitle = cartItemsContainer.getElementsByClassName('shopping-cart-item-title');
+
     for (let i = 0; i < cartElementsTitle.length; i++) {
         if (cartElementsTitle[i].innerText === itemTitle) {
             let cartElementQuantity = cartElementsTitle[i].parentElement.parentElement.parentElement.querySelector('.shopping-cart-quantity-input');

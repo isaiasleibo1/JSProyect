@@ -1,4 +1,3 @@
-// Cart
 #cart {
     background-color: rgba(26, 26, 26, 0.9);
     position: fixed;
@@ -21,14 +20,14 @@
         padding: 2px 5px 1.5px 6px;
         border-radius: 50%;
 
+        #closeCart:hover {
+            transform: scale(1.1);
+        }
+
         i::before {
             width: 12.5px;
             height: 12.5px;
         }
-    }
-
-    #closeCart:hover {
-        transform: scale(1.1);
     }
 
     #cartTitle {
@@ -41,14 +40,12 @@
         border-radius: 1em;
     }
 
-    // Cart Down Part
     #cartDownPart {
         display: flex;
         justify-content: space-evenly;
         margin-top: 1em;
         margin-bottom: 1em;
 
-        // Cart Arrows
         #cartArrows {
             width: 100px;
             display: none;
@@ -83,7 +80,6 @@
             }
         }
 
-        // Cart Total
         #totalContainer {
             width: fit-content;
             color: white;
@@ -118,7 +114,6 @@
         }    
     }
     
-    // Empty Cart Text
     #cartNothingPart {
         color: white;
         width: fit-content;
@@ -126,7 +121,6 @@
         margin-top: 30px;
     }
 
-    // Cart Item Container
     #cartItemsContainer {
         overflow-y: hidden;
         max-height: 237px;
@@ -154,7 +148,6 @@
         }
     }
 
-    // Cart Item
     .shoppingCartItem {
         display: flex;
         align-items: center;
@@ -166,12 +159,10 @@
         margin-top: 10px;
         color: white;
 
-        // Items Margin
         img, h3, .price, .moreValueInput {
             margin-right: 10px;
         }
     
-        // Item Title
         h3 {
             font-size: 15px;
             background: linear-gradient(rgb(26, 26, 26), rgb(53, 53, 53));
@@ -179,7 +170,6 @@
             border-radius: 1em;
         }
 
-        // Item Price
         .price {
             margin-left: auto;
             background: linear-gradient(rgb(26, 26, 26), rgb(53, 53, 53));
@@ -191,7 +181,6 @@
             margin: 0;
         }
 
-        // Image
         img {
             width: 45px;
             height: 45px;
@@ -201,10 +190,10 @@
             border-radius: 10px;
         }
 
-        // Item Quantity
         .input-container {
             margin-right: 3px;
         }
+
         .shopping-cart-quantity-input {
             width: 22px;
             height: 22px;
@@ -218,6 +207,7 @@
             border-radius: 50%;
             padding: 3px;
         }
+
         .moreValueInput {
             background: linear-gradient(rgb(28, 138, 0), rgb(0, 185, 114));
             width: 20px;
@@ -228,25 +218,27 @@
             margin-bottom: 2px;
             border-radius: 50%;
             transition: all 200ms;
+
             p {
                 width: min-content;
             }
         }
+
         .moreValueInput:hover {
             transform: scale(1.05);
         }
+
         .moreValueInput:active {
             transform: scale(1);
         }
+
         .lessValueInput {
             @extend .moreValueInput;
             background: linear-gradient(rgb(255, 166, 0),rgb(209, 118, 15));
             margin-bottom: 0;
-            margin-top: 2px;
-            
+            margin-top: 2px; 
         }
 
-        // Delete Button
         .btn-delete {
             width: 27px;
             height: 27px;
@@ -258,12 +250,13 @@
             border-radius: 7px;
             transition: all 200ms;
         }
+
         .btn-delete:hover {
             transform: scale(1.05);
         }
+
         .btn-delete:active {
             transform: scale(1);
         }
     }
-
 }

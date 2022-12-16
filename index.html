@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Title -->
-    <title>Tienda</title>
+    <!-- Título -->
+    <title>MasterShop</title>
   </head>
+
   <body>
 
-    <!-- Header -->
     <header>
-      
-      
       <div id="headerItemContainer">
         <div class="mobileMenuOpener headerItem">
           <p>
@@ -46,7 +44,7 @@
             <i class="fa-solid fa-camera"></i>Galería
           </p>
         </div>
-        <!-- Cart Button Opener -->
+        <!-- Botón para abrir carrito -->
         <div id="cartButtonContainer" class="headerItem">
           <div id="cartBubble"></div>
           <div id="cartButton">
@@ -57,17 +55,22 @@
         </div>
       </div>
     </header>
-    <!-- Cart -->
+
+    <!-- Carrito -->
     <div id="cart">
-      <div id="closeCart"><i class="fa-solid fa-xmark fa-lg"></i></div>
-      <div id="cartTitle"><h3>Carrito</h3></div>
-      <!-- Cart Empty -->
+      <div id="closeCart">
+        <i class="fa-solid fa-xmark fa-lg"></i>
+      </div>
+      <div id="cartTitle">
+        <h3>Carrito</h3>
+      </div>
+      <!-- texto carrito vacío -->
       <div id="cartNothingPart">
         <h2>No hay nada en su carrito.</h2>
       </div>
-      <!-- Cart Items -->
+      <!-- Items del carrito -->
       <div id="cartItemsContainer"></div>
-      <!-- Cart Down Part (Buttons and Total) -->
+      <!-- Parte de abajo del carrito -->
       <div id="cartDownPart">
         <div id="cartArrows">
           <h2 id="cartItemCounter">Items:</h2>
@@ -80,6 +83,7 @@
             </button>
           </div>
         </div>
+        <!-- Total del carrito -->
         <div id="totalContainer">
           <p id="totalText">Total</p>
           <p id="shopping-cart-total">$0</p>
@@ -88,6 +92,7 @@
       </div>
     </div>
 
+    <!-- Menu header para celulares -->
     <div id="mobileMenu">
       <div class="headerItem pageRedirect">
         <p>
@@ -109,9 +114,8 @@
           <i class="fa-solid fa-camera"></i>Galería
         </p>
       </div>
-      
     </div>
-    
+
     <div class="carouselContainer">
       <!-- Carousel (Simple) Procesadores -->
       <h2 class="carouselTitle">Los mejores procesadores</h2>
@@ -265,7 +269,6 @@
         </button>
       </div>
     </div>
-    
     <div class="carouselContainer">
       <!-- Carousel (Description) Notebooks -->
       <h2 class="carouselTitle">Elige tu notebook ideal</h2>
@@ -412,28 +415,28 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer>
       <div class="social-media">
         <div class="social-media-app">
           <img class="item-img" src="./img/instagram.webp">
           <p>Instagram</p>
         </div>
-        
         <div class="social-media-app">
           <img class="item-img" src="./img/facebook.png" alt="">
           <p>Facebook</p>
         </div>
-        <div class="social-media-app"> 
-          <img class="item-img" src="./img/whatsapp.webp" alt=""> 
+        <div class="social-media-app">
+          <img class="item-img" src="./img/whatsapp.webp" alt="">
           <p>WhatsApp</p>
         </div>
       </div>
     </footer>
 
+    <script src="./js/refreshPage.js"></script>
     <script src="./js/cart.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/mobileMenu.js"></script>
     <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
+    
   </body>
 </html>

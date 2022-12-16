@@ -1,11 +1,9 @@
-// Carousel (Simple)
 .itemsSubContainer.carouselWithDescription {
     display: flex;
     width: fit-content;
     margin: 0 auto;
     margin-bottom: 2em;
 
-    // Items Container
     .itemsContainer {
         border-radius: 1em;
         background: linear-gradient(rgb(204, 204, 204), rgb(255, 255, 255));
@@ -16,7 +14,6 @@
         scroll-behavior: smooth;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 
-        // Item container
         .card {
             background-color: rgb(37, 37, 37);
             margin: 10px;
@@ -25,8 +22,6 @@
             border-radius: 1em;
             width: 407px;
             
-
-            // Item
             .item {
                 display: grid;
                 grid-template-areas: 
@@ -36,7 +31,6 @@
                     display: flex;
                     flex-direction: column;
 
-                    // Image
                     img {
                         margin-right: 30px;
                         margin-left: 30px;
@@ -47,7 +41,6 @@
                         object-fit: contain;
                     }
                 
-                    // Title
                     .item-title {
                         margin-top: 3px;
                         font-weight: 100;
@@ -55,7 +48,6 @@
                         margin-left: 10px;
                     }
                 
-                    // Add To Cart
                     .ver-mas-button {
                         margin: 0 auto;
                         margin-top: 10px;
@@ -91,9 +83,128 @@
                         display: none;
                     }
                 }
-
-                
             }
         }
     }
+
+    
+    @media screen and (max-width: 1480px) {
+        .itemsContainer {
+            width: 854px !important;
+        }
+    }
+    
+    @media screen and (max-width: 1030px) {
+        .itemsContainer {
+            width: 741px !important;
+        }
+        
+        .item {
+            grid-template-areas: 
+            "item"
+            "description" !important; 
+
+            img {
+                margin: 10px auto 0 auto !important;
+            }
+
+            article {
+                height: 120px !important;
+            }
+
+            section {
+                .item-button-cart {
+                    margin-bottom: 0 !important;
+                    margin-top: 10px !important;
+                }
+
+                .item-title {
+                    margin: 0 10px !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 920px) {
+        .itemsContainer {
+            width: 494px !important;
+        }
+    }
+
+    @media screen and (max-width: 820px) {
+        .carouselContainer {
+            margin: 0 !important;
+        }
+    
+        .itemsContainer {
+            overflow-x: scroll !important;
+            margin: 0 auto !important;
+        }
+
+        .scrollLeftDescription {
+            display: none;
+        }
+
+        .scrollRightDescription {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 530px) {
+        width: 100vw !important;
+        .itemsContainer {
+            width: 100vw !important;
+            border-radius: 0 !important;
+
+            .item, .card, section {
+                width: calc(33.3333vw - 20px) !important;
+            }
+
+            .item {
+                .item-price {
+                    font-size: 20px !important;
+                }
+
+                .item-title {
+                    font-size: 10px !important;
+                }
+
+                .item-button-cart {
+                    font-size: 10px !important;
+                    margin-bottom: 15px !important;
+                }
+
+                article {
+                    margin: 0 auto !important;
+                    width: calc(33.3333vw - 40px) !important;
+                    height: fit-content !important;
+                    
+                    li {
+                        display: inline;
+                        font-size: 12px;
+                    }
+                }
+            } 
+        }
+    }
+
+    @media screen and (max-width: 470px) {
+        .itemsContainer {
+            .item, .card, section {
+                width: calc(50vw - 20px) !important;
+            }
+
+            .item {
+                article {
+                    width: calc(50vw - 40px) !important;
+                    margin-bottom: 10px !important;
+
+                    p {
+                        width: calc(50vw - 40px) !important;
+                    }
+                }
+            }  
+        }
+    }
 }
+

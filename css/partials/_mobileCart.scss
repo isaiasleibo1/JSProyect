@@ -21,8 +21,7 @@
         "img value"
         "img delete";
         grid-template-columns: 200px 1fr;
-        box-shadow: 5px 5px 5px #424242,
-           -5px -5px 5px #919191;
+        box-shadow: 5px 5px 5px #424242, -5px -5px 5px #919191;
            
            
 
@@ -37,8 +36,6 @@
             grid-area: img;
             position: relative;
             left: 0;
-
-            
         }
         
         
@@ -108,9 +105,11 @@
             .moreValueInput:hover {
                 transform: scale(1.05);
             }
+
             .moreValueInput:active {
                 transform: scale(1);
             }
+
             .lessValueInput {
                 @extend .moreValueInput;
                 background: linear-gradient(rgb(255, 166, 0),rgb(209, 118, 15));
@@ -123,6 +122,7 @@
             margin: 0 auto;
             width: fit-content;
             padding: 7px;
+
             .btn-delete {
                 width: 50px;
                 height: 20px;
@@ -134,9 +134,11 @@
                 border-radius: 7px;
                 transition: all 200ms;
             }
+
             .btn-delete:hover {
                 transform: scale(1.05);
             }
+
             .btn-delete:active {
                 transform: scale(1);
             }
@@ -170,12 +172,9 @@
                 height: 17px !important;
             }
             
-            
             width: 310px;
             grid-template-columns: 150px 1fr;
-        }
-
-        
+        }        
     }
 }
 

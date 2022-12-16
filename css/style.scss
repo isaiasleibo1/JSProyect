@@ -9,11 +9,6 @@
     src: url(../fonts/Montserrat-Regular.ttf);
 }
 
-@font-face {
-    font-family: "Nexa";
-    src: url(../fonts/Nexa-Trial-Regular.ttf);
-}
-
 html {
     height: 100%;
 }
@@ -26,18 +21,6 @@ body {
     user-select: none;
 }
 
-@import "partials/header";
-@import "partials/simple-carousel";
-@import "partials/carouselWithDescription";
-@import "partials/carouselScroll";
-@import "partials/carouselContainer";
-@import "partials/cart";
-@import "partials/footer";
-@import "partials/carosuelSimpleResponsive";
-@import "partials/form";
-@import "partials/mobileCart";
-@import "partials/mediaQuerys";
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -47,73 +30,17 @@ body {
     display: none;
 }
 
-@keyframes mobileMenuOpen {
-    from {
-        left: -200px;
-    }
+@import "partials/header";
+@import "partials/footer";
+@import "partials/mobileMenu";
 
-    to {
-        left: 0;
-    }
-}
+@import "partials/contact";
+@import "partials/galeria";
 
-@keyframes mobileMenuClose {
-    
-    from {
-        left: 0;
-    }
+@import "partials/carouselScroll";
+@import "partials/carouselSimple";
+@import "partials/carouselWithDescription";
+@import "partials/carouselContainer";
 
-    to {
-        left: -200px;
-    }
-
-    
-}
-
-div#mobileMenu {
-    z-index: 2;
-    left: -200px;
-    background: linear-gradient(rgb(0, 0, 34), rgb(0, 0, 65));
-    box-shadow: rgba(50, 50, 93) 0px 50px 100px -20px, rgba(0, 0, 0) 0px 30px 60px -30px;
-    position: absolute;
-    top: 40px;
-    border-bottom-right-radius: 1em;
-    padding: 10px;
-    color: white;
-    animation-duration: 200ms !important;
-    animation-fill-mode: forwards !important;
-
-    .headerItem:hover {
-        transform: scale(1.05);
-    }
-
-    .headerItem:active {
-        transform: scale(0.97);
-    }
-
-    div.headerItem {
-        width: fit-content;
-        align-items: center;
-        background-color: rgb(51, 51, 51);
-        padding-top: 2.5px;
-        padding-bottom: 2.5px;
-        padding-right: 8px;
-        padding-left: 8px;
-        border-radius: 1em;
-        transition: all 500ms;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        cursor: pointer;
-
-        p {
-            color: rgb(255, 255, 255);
-
-            .fa-solid {
-                margin-right: 5px;
-            }
-        }
-
-        
-    } 
-
-}
+@import "partials/cart";
+@import "partials/mobileCart";

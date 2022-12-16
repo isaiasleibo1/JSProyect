@@ -12,14 +12,6 @@ header {
         align-items: center;
         margin: 0 auto;
 
-        .headerItem:hover {
-            transform: scale(1.05);
-        }
-
-        .headerItem:active {
-            transform: scale(0.97);
-        }
-
         div.headerItem {
             margin: 0 5px;
             display: inline;
@@ -42,9 +34,15 @@ header {
                     margin-right: 5px;
                 }
             }
-
-            
         } 
+
+        .headerItem:hover {
+            transform: scale(1.05);
+        }
+
+        .headerItem:active {
+            transform: scale(0.97);
+        }
 
         .mobileMenuCloser.headerItem {
             display: none;
@@ -70,8 +68,6 @@ header {
             #cartButton {
                 display: flex;
             }
-        }
-        
-        
+        }   
     }
 }

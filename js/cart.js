@@ -1,37 +1,22 @@
-console.log('Atencón!!: Si la proporcón horizontal de la pantalla cambia la página será recargada');
-var windowWidth = window.innerWidth;
-setInterval(() => {
-    let windowWidthChecker = window.innerWidth;
-    if(windowWidth != windowWidthChecker) {
-        location.reload();
-    }
-}, 1000);
-
 const cartItemsContainer = document.querySelector('#cartItemsContainer');
 const cartBuyButton = document.querySelector('#shopping-cart-buy');
 cartItemsContainer.innerHTML = localStorage.getItem('cartStorage');
 
-
-// cartStorage
-// Botón de eliminar item
 var itemDeleteButtons = document.querySelectorAll('.btn-delete')
     itemDeleteButtons.forEach((itemDeleteButton) => {
       itemDeleteButton.addEventListener('click', itemDeleteButtonClicked);  
 })
 
-// Botón de aumentar cantidad
 var moreValueInput = document.querySelectorAll('.moreValueInput');
 moreValueInput.forEach((button) => {
     button.addEventListener('click', moreValueInputClicked);
 });
 
-// Botón de disminuir cantidad
 var lessValueInput = document.querySelectorAll('.lessValueInput');
 lessValueInput.forEach((button) => {
     button.addEventListener('click', lessValueInputClicked);
 })
 
-// Texto de carrito vacío
 let cartItems = document.querySelectorAll('.shoppingCartItem');
 var nothingPart = document.querySelector('#cartNothingPart');
 if (cartItems.length == 0) {
@@ -42,7 +27,6 @@ if (cartItems.length == 0) {
     cartItemsContainer.style.marginTop = '25px';
 }
 
-// Slider del carrito
 const cartArrows = document.querySelector('#cartArrows');
 if (cartItems.length > 3) {
     cartArrows.style.display = 'flex';
@@ -50,11 +34,9 @@ if (cartItems.length > 3) {
     cartArrows.style.display = 'none';
 }
 
-// Contador de items
 let cartItemCounter = document.querySelector('#cartItemCounter');
 cartItemCounter.innerHTML = `Items: ${cartItems.length}`;
 
-// Total del carrito
 const firstTotalText = document.querySelector('#shopping-cart-total');
 const firstCartItems = document.querySelectorAll('.shoppingCartItem');
 
@@ -75,7 +57,6 @@ if (firstCartItems.length == 0) {
     });
 }
 
-// Burbuja del carrito
 const cartBubble = document.querySelector('#cartBubble');
 if (cartItems.length == 0) {
     cartBubble.style.display = 'none';
@@ -89,7 +70,6 @@ if (cartItems.length == 0) {
 }
 //
 
-// Actualizar el carrito
 function updateCartTotal() {
     const cartItems = document.querySelectorAll('.shoppingCartItem');
 
@@ -111,12 +91,8 @@ function updateCartTotal() {
         });
     }
 
-    // Actualizar funciones //   
-
-
     localStorage.setItem('cartStorage', cartItemsContainer.innerHTML);
 
-    // Texto carrito vacío
     if (cartItems.length == 0) {
         nothingPart.innerHTML = `<h2>No hay nada en su carrito.</h2>`;
         cartItemsContainer.style.marginTop = '0';
@@ -125,20 +101,17 @@ function updateCartTotal() {
         cartItemsContainer.style.marginTop = '25px';
     }    
 
-    // Actualizar slide items carrito
     if (cartItems.length > 3) {
         cartArrows.style.display = 'flex';
     } else if (cartItems.length <= 3) {
         cartArrows.style.display = 'none';
     }
 
-    // Actualizar los botones de eliminar item
     var itemDeleteButtons = document.querySelectorAll('.btn-delete')
     itemDeleteButtons.forEach((itemDeleteButton) => {
       itemDeleteButton.addEventListener('click', itemDeleteButtonClicked);  
     })
     
-    // Actualizar burbuja del carrito
     if (cartItems.length == 0) {
         cartBubble.style.opacity = '0';
         setTimeout(() => {
@@ -153,11 +126,9 @@ function updateCartTotal() {
         
     }
 
-    // Contador de items
     cartItemCounter = document.querySelector('#cartItemCounter');
     cartItemCounter.innerHTML = `Items: ${cartItems.length}`;
 
-    // Actualizar botones del contador de los items
     var moreValueInput = document.querySelectorAll('.moreValueInput');
     moreValueInput.forEach((button) => {
         button.addEventListener('click', moreValueInputClicked);
@@ -169,7 +140,6 @@ function updateCartTotal() {
     })
 }
 
-// Eliminar item carrito
 function itemDeleteButtonClicked(event) {
     const button = event.target;
     const item = button.closest('.shoppingCartItem').parentElement;
@@ -178,7 +148,6 @@ function itemDeleteButtonClicked(event) {
     updateCartTotal();
 }
 
-// Aumentar cantidad item
 function moreValueInputClicked(event) {
     const button = event.target;
     const item = button.closest('.shoppingCartItem');
@@ -195,7 +164,6 @@ function moreValueInputClicked(event) {
     updateCartTotal();
 }
 
-// Disminuir cantidad item
 function lessValueInputClicked(event) {
     const button = event.target;
     const item = button.closest('.shoppingCartItem');
@@ -213,7 +181,6 @@ function lessValueInputClicked(event) {
     updateCartTotal();
 }
 
-// Abrir carrito
 const cartButton = document.querySelector('#cartButtonContainer');
 cartButton.addEventListener('click', cartButtonClicked);
 
@@ -266,7 +233,6 @@ function cartCloserClicked() {
     }, 1000);
 }
 
-// Slide items carrito
 const mostrarMas = document.querySelector('#mostrarMas');
 const mostrarMenos = document.querySelector('#mostrarMenos');
 
@@ -289,7 +255,6 @@ function mostrarMenosClicked() {
     }, 250);
 };
 
-// Comprar
 cartBuyButton.addEventListener('click', cartBuyButtonClicked);
 
 function cartBuyButtonClicked() {
@@ -304,5 +269,4 @@ function cartBuyButtonClicked() {
             alert('Su pedido llegará pronto.')
         }, 200);
     }
-    
 }
