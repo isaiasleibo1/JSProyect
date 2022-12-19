@@ -72,7 +72,11 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
                 cartAlert.style.top = '0';
                 cartAlert.style.position = 'fixed';
             } else {
-                cartAlert.style.top = '40px';
+                if(window.innerWidth >= 620) {
+                    cartAlert.style.top = '50px';
+                } else {
+                    cartAlert.style.top = '40px';
+                }
                 cartAlert.style.position = 'absolute';
             }
         }, 20);
