@@ -144,3 +144,18 @@ main {
         }
     }
 }
+
+#cartAlert {
+    opacity: 0;
+    padding: 5px;
+    background-color: rgb(56, 56, 56);
+    position: fixed;
+    top: 40px;
+    align-self: center;
+    border-radius: 12px;
+    margin: 10px;
+
+    p {
+        color: white;
+    }
+}

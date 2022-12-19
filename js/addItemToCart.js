@@ -57,6 +57,25 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
         </div>
     </div>`;
 
+    const cartAlert = document.querySelector('#cartAlert');
+    setTimeout(() => {
+        if(window.scrollY == 0) {
+            cartAlert.style.top = '40px';
+        } else if (window.scrollY < 40) {
+            cartAlert.style.top = `calc(40px - ${window.scrollY}px)`;
+        } else {
+            cartAlert.style.top = '0px';
+        }
+
+        cartAlert.style.opacity = 1;
+        cartAlert.innerHTML = '<p>Su producto se ha añadido correctamente.</p>'
+
+        setTimeout(() => {
+            cartAlert.style.opacity = 0;
+        }, 2000)
+    }, 50);
+
+
     createElement.innerHTML = elementContent;
     cartItemsContainer.append(createElement);
 

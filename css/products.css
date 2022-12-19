@@ -128,4 +128,18 @@ main #itemFunctions #functionsCont #addToCartCont #addToCart:hover {
 }
 main #itemFunctions #functionsCont #addToCartCont #addToCart:active {
   transform: scale(1);
+}
+
+#cartAlert {
+  opacity: 0;
+  padding: 5px;
+  background-color: rgb(56, 56, 56);
+  position: fixed;
+  top: 40px;
+  align-self: center;
+  border-radius: 12px;
+  margin: 10px;
+}
+#cartAlert p {
+  color: white;
 }/*# sourceMappingURL=products.css.map */
