@@ -192,7 +192,44 @@ function cartButtonClicked() {
     if (visualWidth <= 620) {
         const cartItems = document.querySelectorAll('.shoppingCartItem');
         if (cartItems.length == 0) {
-            alert('Por favor seleccione un producto.');
+
+
+            const cartAlert = document.querySelector('#cartAlert');
+            setTimeout(() => {
+
+                cartAlert.style.display = 'block';
+
+                setTimeout(() => {
+                    cartAlert.style.opacity = 1;
+                    cartAlert.innerHTML = '<p>Por favor, seleccione un producto.</p>'
+                }, 10);
+
+                const intervalFunction = setInterval(() => {
+                    if(window.scrollY >= 40) {
+                        cartAlert.style.top = '0';
+                        cartAlert.style.position = 'fixed';
+                    } else {
+                        if(window.innerWidth >= 620) {
+                            cartAlert.style.top = '50px';
+                        } else {
+                            cartAlert.style.top = '40px';
+                        }
+                        cartAlert.style.position = 'absolute';
+                    }
+                }, 20);
+
+                setTimeout(() => {
+                    cartAlert.style.opacity = 0;
+                    
+                    setTimeout(() => {
+                        cartAlert.style.display = 'none';
+                    }, 200)
+                    
+                    clearInterval(intervalFunction);
+                }, 2000)
+            }, 10);
+
+    
         } else if (cartItems.length >= 1) {
             const pathname = window.location.pathname;
             const pathnameChecker = pathname.includes('products');

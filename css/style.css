@@ -7,6 +7,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url(../fonts/Montserrat-Regular.ttf);
+  font-display: swap;
 }
 html {
   height: 100%;
@@ -1224,4 +1225,21 @@ div#mobileMenu div.headerItem p .fa-solid {
   position: fixed;
   width: 100vw;
   bottom: 0;
+}
+
+#cartAlert {
+  opacity: 0;
+  padding: 5px;
+  background-color: rgb(56, 56, 56);
+  position: absolute;
+  top: 40px;
+  align-self: center;
+  border-radius: 12px;
+  margin: 10px;
+  transition: all 0ms;
+  transition: opacity 200ms;
+  text-align: center;
+}
+#cartAlert p {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

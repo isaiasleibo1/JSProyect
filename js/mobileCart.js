@@ -8,10 +8,13 @@ setInterval(() => {
     }
 }, 1000);
 
-const cartItems2 = document.querySelectorAll('.shoppingCartItem');
-if (cartItems2.length <= 0) {
-    window.open(".", "_self");
-}
+const cartItemsLengyhChecker = setInterval(() => {
+    const cartItems2 = document.querySelectorAll('.shoppingCartItem');
+    if (cartItems2.length <= 0) {
+        window.open(".", "_self");
+    }
+}, 1000)
+
 
 setTimeout(() => {
     const itemDeleteButtons = document.querySelectorAll('.btn-delete');
@@ -66,7 +69,7 @@ function itemDeleteButtonClicked(event) {
     
     if (cartItems.length == 0) {
         setTimeout(() => {
-            window.open("./", "_self");
+            window.open(".", "_self");
         }, 100)
     }
     
@@ -138,17 +141,55 @@ function cartBuyButtonClicked() {
     const cartItems = document.querySelectorAll('.shoppingCartItem');
 
     if (cartItems.length == 0) {
-        alert('Por favor, seleccione un producto.')
+        window.open(".", "_self");
     } else {
+        clearInterval(cartItemsLengyhChecker);
         cartMain.innerHTML = '';
         updateCartTotal();
-        setTimeout(() => {
-            alert('Su pedido llegará pronto.')
+            
 
+            const cartAlert = document.querySelector('#cartAlert');
             setTimeout(() => {
-                window.open("./index.html", "_self");
-            })
-        }, 200);
+
+                cartAlert.style.display = 'block';
+
+                setTimeout(() => {
+                    cartAlert.style.opacity = 1;
+                    cartAlert.innerHTML = '<p>Su pedido llegará pronto!!</p>'
+                }, 10);
+
+                const intervalFunction = setInterval(() => {
+                    if(window.scrollY >= 40) {
+                        cartAlert.style.top = '0';
+                        cartAlert.style.position = 'fixed';
+                    } else {
+                        if(window.innerWidth >= 620) {
+                            cartAlert.style.top = '50px';
+                        } else {
+                            cartAlert.style.top = '40px';
+                        }
+                        cartAlert.style.position = 'absolute';
+                    }
+                }, 20);
+
+                setTimeout(() => {
+                    cartAlert.style.opacity = 0;
+                    
+                    setTimeout(() => {
+                        cartAlert.style.display = 'none';
+                    }, 200)
+                    
+                    clearInterval(intervalFunction);
+
+                    setTimeout(() => {
+                        window.open(".", "_self");
+                    }, 200)
+                }, 2000)
+            }, 10);
+            
+
+
+            
     }
     
 }
