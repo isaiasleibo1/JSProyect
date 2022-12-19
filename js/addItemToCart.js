@@ -59,21 +59,34 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
 
     const cartAlert = document.querySelector('#cartAlert');
     setTimeout(() => {
-        if(window.scrollY == 0) {
-            cartAlert.style.top = '40px';
-        } else if (window.scrollY < 40) {
-            cartAlert.style.top = `calc(40px - ${window.scrollY}px)`;
-        } else {
-            cartAlert.style.top = '0px';
-        }
 
-        cartAlert.style.opacity = 1;
-        cartAlert.innerHTML = '<p>Su producto se ha añadido correctamente.</p>'
+        cartAlert.style.display = 'block';
+
+        setTimeout(() => {
+            cartAlert.style.opacity = 1;
+            cartAlert.innerHTML = '<p>Su producto se ha añadido correctamente.</p>'
+        }, 10);
+
+        const intervalFunction = setInterval(() => {
+            if(window.scrollY >= 40) {
+                cartAlert.style.top = '0';
+                cartAlert.style.position = 'fixed';
+            } else {
+                cartAlert.style.top = '40px';
+                cartAlert.style.position = 'absolute';
+            }
+        }, 20);
 
         setTimeout(() => {
             cartAlert.style.opacity = 0;
+            
+            setTimeout(() => {
+                cartAlert.style.display = 'none';
+            }, 200)
+            
+            clearInterval(intervalFunction);
         }, 2000)
-    }, 50);
+    }, 10);
 
 
     createElement.innerHTML = elementContent;

@@ -134,11 +134,13 @@ main #itemFunctions #functionsCont #addToCartCont #addToCart:active {
   opacity: 0;
   padding: 5px;
   background-color: rgb(56, 56, 56);
-  position: fixed;
+  position: absolute;
   top: 40px;
   align-self: center;
   border-radius: 12px;
   margin: 10px;
+  transition: all 0ms;
+  transition: opacity 200ms;
 }
 #cartAlert p {
   color: white;
