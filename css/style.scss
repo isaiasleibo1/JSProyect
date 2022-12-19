@@ -58,6 +58,8 @@ body {
     transition: all 0ms;
     transition: opacity 200ms;
     text-align: center;
+    z-index: 3;
+    border: 1px solid white;
 
     p {
         color: white;

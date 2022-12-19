@@ -781,7 +781,7 @@ div#mobileMenu div.headerItem p .fa-solid {
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 2;
+  z-index: 3;
 }
 #cart #closeCart {
   color: red;
@@ -1239,6 +1239,8 @@ div#mobileMenu div.headerItem p .fa-solid {
   transition: all 0ms;
   transition: opacity 200ms;
   text-align: center;
+  z-index: 3;
+  border: 1px solid white;
 }
 #cartAlert p {
   color: white;

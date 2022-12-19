@@ -142,6 +142,8 @@ main #itemFunctions #functionsCont #addToCartCont #addToCart:active {
   transition: all 0ms;
   transition: opacity 200ms;
   text-align: center;
+  z-index: 3;
+  border: 1px solid white;
 }
 #cartAlert p {
   color: white;

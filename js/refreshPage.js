@@ -8,4 +8,4 @@ setInterval(() => {
     if(windowWidth != windowWidthChecker) {
         location.reload();
     }
-}, 1000);
+}, 500);

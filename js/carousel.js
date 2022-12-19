@@ -16,7 +16,7 @@ function carouselScrollLeftSimple() {
     setTimeout(() => {
         scrollRightSimple.addEventListener('click', carouselScrollRightSimple);
         scrollLeftSimple.addEventListener('click', carouselScrollLeftSimple);
-    }, 300);
+    }, 400);
 }
 
 function carouselScrollRightSimple() {
@@ -27,7 +27,7 @@ function carouselScrollRightSimple() {
     setTimeout(() => {
         scrollRightSimple.addEventListener('click', carouselScrollRightSimple);
         scrollLeftSimple.addEventListener('click', carouselScrollLeftSimple);
-    }, 300);
+    }, 400);
 }
 
 // Carousel Description
@@ -54,7 +54,7 @@ function carouselScrollLeftDescription() {
     setTimeout(() => {
         scrollRightDescription.addEventListener('click', carouselScrollRightDescription);
         scrollLeftDescription.addEventListener('click', carouselScrollLeftDescription);
-    }, 400);
+    }, 500);
 }
 
 function carouselScrollRightDescription() {
@@ -71,7 +71,7 @@ function carouselScrollRightDescription() {
     setTimeout(() => {
         scrollRightDescription.addEventListener('click', carouselScrollRightDescription);
         scrollLeftDescription.addEventListener('click', carouselScrollLeftDescription);
-    }, 400);
+    }, 500);
 }
 
 
