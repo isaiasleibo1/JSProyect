@@ -1,7 +1,8 @@
+//Esta script hace que los carousles de items se puedan mover con las flechas en computadora
+
 // Carousel Simple
 const carouselSimple = document.querySelector('.carouselSimple');
 const itemsContainerSimple = carouselSimple.querySelector('.itemsContainer');
-
 const scrollLeftSimple = document.querySelector('.scrollLeftSimple');
 const scrollRightSimple = document.querySelector('.scrollRightSimple');
 
@@ -33,7 +34,6 @@ function carouselScrollRightSimple() {
 // Carousel Description
 const carouselDescription = document.querySelector('.carouselWithDescription');
 const itemsContainerDescription = carouselDescription.querySelector('.itemsContainer');
-
 const scrollLeftDescription = document.querySelector('.scrollLeftDescription');
 const scrollRightDescription = document.querySelector('.scrollRightDescription');
 

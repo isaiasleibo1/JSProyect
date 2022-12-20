@@ -1,3 +1,4 @@
+// Script del menu header para celular
 const mobileMenuOpener = document.querySelector('.mobileMenuOpener');
 const mobileMenuCloser = document.querySelector('.mobileMenuCloser');
 const mobileMenu = document.querySelector('#mobileMenu');
@@ -10,8 +11,6 @@ const body = document.querySelector('body');
 
 function mobileMenuOpenerClicked() {
 
-    
-    
      mobileMenuOpener.style.opacity = '0';
 
      setTimeout(() => {

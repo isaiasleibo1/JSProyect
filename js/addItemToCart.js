@@ -1,7 +1,8 @@
+// Botón para añadir alcarrito
 const itemToCartButton = document.querySelector('#addToCart');
-
 itemToCartButton.addEventListener('click', itemToCartButtonClicked);
 
+// Funcion para cuando se clickea el boton de añadir al carrito
 function itemToCartButtonClicked(event) {
     const button = event.target;
     const item = button.closest('main');
@@ -13,9 +14,11 @@ function itemToCartButtonClicked(event) {
     addItemToCart(itemTitle, itemPrice, itemImage);
 }
 
+// Funcion para añadir item al carrito
 function addItemToCart(itemTitle, itemPrice, itemImage) {
-    let cartElementsTitle = cartItemsContainer.getElementsByClassName('shopping-cart-item-title');
 
+    // Comprueba si el elemento ya existe dentro del carrito
+    let cartElementsTitle = cartItemsContainer.getElementsByClassName('shopping-cart-item-title');
     for (let i = 0; i < cartElementsTitle.length; i++) {
         if (cartElementsTitle[i].innerText === itemTitle) {
             let cartElementQuantity = cartElementsTitle[i].parentElement.parentElement.parentElement.querySelector('.shopping-cart-quantity-input');
@@ -24,6 +27,7 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
                 cartElementQuantity.value++;
             }
                 
+            // Aumenta la cantidad si el elemento ya existe
             cartElementQuantity.parentElement.innerHTML = `<input class="shopping-cart-quantity-input" readonly="" type="number" value="${cartElementQuantity.value}">`;
             
             updateCartTotal();
@@ -31,6 +35,7 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
         }
     }
 
+    // Crea el elemento dentro del carrito
     const createElement = document.createElement('div');
     const elementContent = `
     <div class="shoppingCartItem">
@@ -57,46 +62,10 @@ function addItemToCart(itemTitle, itemPrice, itemImage) {
         </div>
     </div>`;
 
-    const cartAlert = document.querySelector('#cartAlert');
-    setTimeout(() => {
-
-        cartAlert.style.display = 'block';
-
-        setTimeout(() => {
-            cartAlert.style.opacity = 1;
-            cartAlert.innerHTML = '<p>Su producto se ha añadido correctamente.</p>'
-        }, 10);
-
-        const intervalFunction = setInterval(() => {
-            if(window.scrollY >= 40) {
-                cartAlert.style.top = '0';
-                cartAlert.style.position = 'fixed';
-            } else {
-                if(window.innerWidth >= 620) {
-                    cartAlert.style.top = '50px';
-                } else {
-                    cartAlert.style.top = '40px';
-                }
-                cartAlert.style.position = 'absolute';
-            }
-        }, 20);
-
-        setTimeout(() => {
-            cartAlert.style.opacity = 0;
-            
-            setTimeout(() => {
-                cartAlert.style.display = 'none';
-            }, 200)
-            
-            clearInterval(intervalFunction);
-        }, 2000)
-    }, 10);
-
-
     createElement.innerHTML = elementContent;
     cartItemsContainer.append(createElement);
 
-    const itemDeleteButton = createElement.querySelector('.btn-delete');
-      
     updateCartTotal();
+
+    alertModified('Su producto se ha añadido correctamente.');
 }

@@ -1,27 +1,25 @@
+// Carrito telefono //
+
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
 
-setInterval(() => {
-    let windowWidthChecker = window.innerWidth;
-    if (windowWidthChecker > 620) {
-        window.open(".", "_self");
-    }
-}, 1000);
-
-const cartItemsLengyhChecker = setInterval(() => {
+// Comprueba si hay algún item y si no te redirecciona
+const cartItemsLengthChecker = setInterval(() => {
     const cartItems2 = document.querySelectorAll('.shoppingCartItem');
     if (cartItems2.length <= 0) {
         window.open(".", "_self");
     }
-}, 1000)
+}, 1000);
 
-
+// Elementos precargados del carrito para cuando se carga la página
 setTimeout(() => {
+    // Eliminar item
     const itemDeleteButtons = document.querySelectorAll('.btn-delete');
     itemDeleteButtons.forEach((itemDeleteButton) => {
         itemDeleteButton.addEventListener('click', itemDeleteButtonClicked);  
     })
 
+    // Aumentar y disminuir cantidad
     const moreValueInput = document.querySelectorAll('.moreValueInput');
     moreValueInput.forEach((button) => {
         button.addEventListener('click', moreValueInputClicked);
@@ -33,6 +31,7 @@ setTimeout(() => {
     });
 }, 50);
 
+// Total
 setTimeout(() => {
     const firstTotalText = document.querySelector('#shopping-cart-total');
     const firstCartItems = document.querySelectorAll('.shoppingCartItem');
@@ -54,14 +53,13 @@ setTimeout(() => {
         });
     }
 }, 50);
+//
 
-
+// Función para eliminar item
 function itemDeleteButtonClicked(event) {
     const button = event.target;
     console.log(button)
     const item = button.closest('.shoppingCartItem').parentElement;
-
-    
 
     item.remove();
     
@@ -76,6 +74,7 @@ function itemDeleteButtonClicked(event) {
     updateCartTotal();
 }
 
+// Función para aumentar y disminuir cantidad
 function moreValueInputClicked(event) {
     const button = event.target;
     const item = button.closest('.shoppingCartItem');
@@ -108,10 +107,11 @@ function lessValueInputClicked(event) {
     updateCartTotal();
 }
 
-
+// Actualizar carrito
 function updateCartTotal() {
     const cartItems = document.querySelectorAll('.shoppingCartItem');
 
+    // Total
     const totalText = document.querySelector('#shopping-cart-total');
     let total = 0;
 
@@ -130,10 +130,11 @@ function updateCartTotal() {
         });
     }
 
+    // Añadir carrito al localStorage
     localStorage.setItem('cartStorage', cartMain.innerHTML);
 }
 
-
+// Función para comprar
 const cartBuyButton = document.querySelector('#buyButton');
 cartBuyButton.addEventListener('click', cartBuyButtonClicked);
 
@@ -143,53 +144,14 @@ function cartBuyButtonClicked() {
     if (cartItems.length == 0) {
         window.open(".", "_self");
     } else {
-        clearInterval(cartItemsLengyhChecker);
+        clearInterval(cartItemsLengthChecker);
         cartMain.innerHTML = '';
         updateCartTotal();
             
-
             const cartAlert = document.querySelector('#cartAlert');
+            alertModified('Su pedido llegará pronto!!');
             setTimeout(() => {
-
-                cartAlert.style.display = 'block';
-
-                setTimeout(() => {
-                    cartAlert.style.opacity = 1;
-                    cartAlert.innerHTML = '<p>Su pedido llegará pronto!!</p>'
-                }, 10);
-
-                const intervalFunction = setInterval(() => {
-                    if(window.scrollY >= 40) {
-                        cartAlert.style.top = '0';
-                        cartAlert.style.position = 'fixed';
-                    } else {
-                        if(window.innerWidth >= 620) {
-                            cartAlert.style.top = '50px';
-                        } else {
-                            cartAlert.style.top = '40px';
-                        }
-                        cartAlert.style.position = 'absolute';
-                    }
-                }, 20);
-
-                setTimeout(() => {
-                    cartAlert.style.opacity = 0;
-                    
-                    setTimeout(() => {
-                        cartAlert.style.display = 'none';
-                    }, 200)
-                    
-                    clearInterval(intervalFunction);
-
-                    setTimeout(() => {
-                        window.open(".", "_self");
-                    }, 200)
-                }, 2000)
-            }, 10);
-            
-
-
-            
-    }
-    
+                window.open(".", "_self");
+            }, 2400);
+    } 
 }
