@@ -126,7 +126,7 @@
                     }
         
                     .item-title {
-                        font-size: 10px !important;
+                        font-size: 12px !important;
                     }
         
                     .ver-mas-button {
@@ -150,7 +150,7 @@
             } 
         }
         
-        @media screen and (max-width: 474px) {
+        @media screen and (max-width: 480px) {
             .card {
                 .item {
                     height: 46vw !important;
@@ -158,7 +158,7 @@
             }
         }
         
-        @media screen and (max-width: 436px) {
+        @media screen and (max-width: 450px) {
             .card {
                 width: 33.3333vw;
 
@@ -198,6 +198,18 @@
                     }
                     .item-price {
                         font-size: 18px !important;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 340px) {
+            .card {
+                .item {
+                    height: 60vw !important;
+                    .item-img{
+                        width: 65px !important;
+                        height: 65px !important;
                     }
                 }
             }

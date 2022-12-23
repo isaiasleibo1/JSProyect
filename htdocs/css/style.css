@@ -519,7 +519,7 @@ div#mobileMenu div.headerItem p .fa-solid {
     font-size: 20px !important;
   }
   .itemsSubContainer.carouselSimple .itemsContainer .card .item .item-title {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .itemsSubContainer.carouselSimple .itemsContainer .card .item .ver-mas-button {
     font-size: 10px !important;
@@ -535,12 +535,12 @@ div#mobileMenu div.headerItem p .fa-solid {
     height: 42vw !important;
   }
 }
-@media screen and (max-width: 474px) {
+@media screen and (max-width: 480px) {
   .itemsSubContainer.carouselSimple .itemsContainer .card .item {
     height: 46vw !important;
   }
 }
-@media screen and (max-width: 436px) {
+@media screen and (max-width: 450px) {
   .itemsSubContainer.carouselSimple .itemsContainer .card {
     width: 33.3333vw;
   }
@@ -569,6 +569,15 @@ div#mobileMenu div.headerItem p .fa-solid {
   }
   .itemsSubContainer.carouselSimple .itemsContainer .card .item .item-price {
     font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 340px) {
+  .itemsSubContainer.carouselSimple .itemsContainer .card .item {
+    height: 60vw !important;
+  }
+  .itemsSubContainer.carouselSimple .itemsContainer .card .item .item-img {
+    width: 65px !important;
+    height: 65px !important;
   }
 }
 @media screen and (max-width: 820px) {
@@ -726,7 +735,7 @@ div#mobileMenu div.headerItem p .fa-solid {
     font-size: 20px !important;
   }
   .itemsSubContainer.carouselWithDescription .itemsContainer .item .item-title {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .itemsSubContainer.carouselWithDescription .itemsContainer .item .item-button-cart {
     font-size: 10px !important;
