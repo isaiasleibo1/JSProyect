@@ -1,0 +1,15 @@
+main {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  width: 90vw;
+  max-width: 700px;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main h1 {
+  font-size: 50px;
+}/*# sourceMappingURL=error.css.map */
