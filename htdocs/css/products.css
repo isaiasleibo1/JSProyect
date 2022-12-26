@@ -122,6 +122,7 @@ main #itemFunctions #functionsCont #addToCartCont #addToCart {
   font-family: Montserrat;
   padding: 5px;
   border-radius: 8px;
+  cursor: pointer;
 }
 main #itemFunctions #functionsCont #addToCartCont #addToCart:hover {
   transform: scale(1.05);

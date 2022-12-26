@@ -127,6 +127,7 @@ footer .social-media .social-media-app {
   align-items: center;
   margin-right: 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
 footer .social-media .social-media-app img {
   width: 30px;
@@ -305,6 +306,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   transition: background 250ms;
   overflow: hidden;
+  cursor: pointer;
 }
 #formmain #form form #enviar::before {
   content: "";
@@ -383,6 +385,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   color: white;
   border-radius: 50%;
   transition: all 200ms;
+  cursor: pointer;
 }
 
 .scrollR:hover, .scrollL:hover {
@@ -456,6 +459,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   border: 0;
   padding: 5px;
   transition: all 200ms;
+  cursor: pointer;
 }
 .itemsSubContainer.carouselSimple .itemsContainer .card .item .ver-mas-button:hover {
   transform: scale(1.05);
@@ -654,6 +658,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   border: 0;
   padding: 5px;
   transition: all 200ms;
+  cursor: pointer;
 }
 .itemsSubContainer.carouselWithDescription .itemsContainer .card .item section .ver-mas-button:hover {
   transform: scale(1.05);
