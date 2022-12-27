@@ -221,9 +221,8 @@ function cartButtonClicked() {
             alertModified('Por favor, seleccione un producto.');
         } else if (cartItems.length >= 1) {
             const pathname = window.location.pathname;
-            const pathnameChecker = pathname.includes('products');
 
-            if (pathnameChecker == true) {
+            if (pathname.includes('products') || pathname.includes('error')) {
                 window.open("../mobileCart", "_self")
             } else {
                 window.open("./mobileCart", "_self");
