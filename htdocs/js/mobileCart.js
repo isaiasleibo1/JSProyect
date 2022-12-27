@@ -3,6 +3,13 @@
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
 
+setInterval(() => {
+    let windowWidthChecker2 = window.innerWidth;
+    if(windowWidthChecker2 > 620) {
+        window.open(".", "_self");
+    }
+}, 500);
+
 // Comprueba si hay algún item y si no te redirecciona
 const cartItemsLengthChecker = setInterval(() => {
     const cartItems2 = document.querySelectorAll('.shoppingCartItem');
