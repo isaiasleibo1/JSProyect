@@ -138,6 +138,21 @@
 
 
       <div id="cartAlert"></div>
+      <div id="cartAlert"></div>
+      <div id="cartBuy">
+        <div id="cartBuyCloser">
+          <i class="fa-solid fa-xmark fa-lg"></i>
+        </div>
+        <label for="cardNumber">Número de la tarjeta</label>
+        <input autocomplete="off" type="number" name="cardNumber" id="cardNumber" required>
+        <label for="cardOwner">Nombre</label>
+        <input autocomplete="off" type="text" name="cardOwner" id="cardOwner" required>
+        <label for="cardExpiration">Fecha de expiración</label>
+        <input autocomplete="off" type="datetime" name="cardExpiration" id="cardExpiration" required>
+        <label for="cardCVC">CVC</label>
+        <input autocomplete="off" type="number" name="cardCVC" id="cardCVC" required>
+        <button id="cardSubmit">Comprar</button>
+      </div>
 
       
     <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
