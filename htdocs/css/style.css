@@ -1258,4 +1258,64 @@ div#mobileMenu div.headerItem p .fa-solid {
 }
 #cartAlert p {
   color: white;
+}
+
+#cartBuy {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 260px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgb(56, 56, 56);
+  border-radius: 1em;
+  padding: 1em;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  z-index: 4;
+}
+#cartBuy #cartBuyCloser {
+  color: red;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 8px;
+  top: 8px;
+  background-color: black;
+  padding: 1px 4.5px;
+  border-radius: 50%;
+}
+#cartBuy label {
+  font-weight: bolder;
+  color: white;
+}
+#cartBuy input {
+  width: calc(100% - 2em);
+  font-family: Montserrat;
+  font-weight: bolder;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  height: 30px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  padding: 0 1em;
+}
+#cartBuy button {
+  background-color: white;
+  font-family: Montserrat;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bolder;
+  border-radius: 8px;
+  border: 0;
+  padding: 5px;
+  margin-left: 95.625px;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

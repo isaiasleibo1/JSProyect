@@ -165,6 +165,20 @@
       </footer>
 
       <div id="cartAlert"></div>
+      <div id="cartBuy">
+        <div id="cartBuyCloser">
+          <i class="fa-solid fa-xmark fa-lg"></i>
+        </div>
+        <label for="cardNumber">Número de la tarjeta</label>
+        <input type="number" name="cardNumber" id="cardNumber" required>
+        <label for="cardOwner">Nombre</label>
+        <input type="text" name="cardOwner" id="cardOwner" required>
+        <label for="cardExpiration">Fecha de expiración</label>
+        <input type="datetime" name="cardExpiration" id="cardExpiration" required>
+        <label for="cardCVC">CVC</label>
+        <input type="number" name="cardCVC" id="cardCVC" required>
+        <button id="cardSubmit">Comprar</button>
+      </div>
 
     <script src="https://kit.fontawesome.com/aaf7184bfe.js" crossorigin="anonymous"></script>
     <script src="../js/refreshPage.js"></script>
@@ -172,5 +186,6 @@
     <script src="../js/cart.js"></script>
     <script src="../js/alert.js"></script>
     <script src="../js/addItemToCart.js"></script>
+    <script src="../js/cardDiv.js"></script>
 </body>
 </html>

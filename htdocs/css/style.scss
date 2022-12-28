@@ -65,3 +65,61 @@ body {
         color: white;
     }
 }
+
+#cartBuy {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 260px;
+    height: fit-content;
+    background-color: rgb(56, 56, 56);
+    border-radius: 1em;
+    padding: 1em;
+    margin: auto;
+    display: none;
+    opacity: 0;
+    z-index: 4;
+
+    #cartBuyCloser {
+        color: red;
+        position: absolute;
+        width: fit-content;
+        right: 8px;
+        top: 8px;
+        background-color: black;
+        padding: 1px 4.5px;
+        border-radius: 50%;
+    }
+
+    label {
+        font-weight: bolder;
+        color: white;
+    }
+
+    input {
+        width: calc(100% - 2em);
+        font-family: Montserrat;
+        font-weight: bolder;
+        border: 0;
+        outline: 0;
+        border-radius: 6px;
+        height: 30px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+        padding: 0 1em;
+    }
+
+    button {
+        background-color: white;
+        font-family: Montserrat;
+        width: fit-content;
+        font-weight: bolder;
+        border-radius: 8px;
+        border: 0;
+        padding: 5px;
+        margin-left: calc((260px / 2) - (68.75px / 2));
+        margin-top: 10px;
+    }
+}

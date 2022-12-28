@@ -151,14 +151,10 @@ function cartBuyButtonClicked() {
     if (cartItems.length == 0) {
         window.open(".", "_self");
     } else {
-        clearInterval(cartItemsLengthChecker);
-        cartMain.innerHTML = '';
-        updateCartTotal();
-            
-            const cartAlert = document.querySelector('#cartAlert');
-            alertModified('Su pedido llegará pronto!!');
-            setTimeout(() => {
-                window.open(".", "_self");
-            }, 2400);
+        const cartBuyDiv = document.querySelector('#cartBuy');
+        cartBuyDiv.style.display = 'block';
+        setTimeout(() => {
+            cartBuyDiv.style.opacity = '1';
+        }, 20) 
     } 
 }

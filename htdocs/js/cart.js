@@ -291,8 +291,15 @@ function cartBuyButtonClicked() {
     if (cartItems.length == 0) {
         alertModified('Por favor, seleccione un producto.');
     } else {
-        cartItemsContainer.innerHTML = '';
-        updateCartTotal();      
-        alertModified('Su pedido llegará pronto!!');
+        const cart = document.querySelector('#cart');
+        if(cart.style.animationName == 'cartOpen') {
+            cart.style.animationName = 'cartClose';
+        }
+
+        const cartBuyDiv = document.querySelector('#cartBuy');
+        cartBuyDiv.style.display = 'block';
+        setTimeout(() => {
+            cartBuyDiv.style.opacity = '1';
+        }, 20) 
     }     
 }
