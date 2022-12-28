@@ -31,7 +31,7 @@ function cardSubmitClicked() {
 
     if (cardNumber.value != "" && cardOwner.value != "" && cardExpiration.value != "" && cardCVC.value != "") {
         cartBuyDiv.style.opacity = '0';
-        
+
         if (typeof cartItemsContainer == 'undefined') {
             cartMain.innerHTML = '';
         } else {
@@ -44,7 +44,7 @@ function cardSubmitClicked() {
             cartBuyDiv.style.display = 'none';
         }, 200)
 
-        if (cartItemsLengthChecker) {
+        if (typeof cartItemsLengthChecker !== 'undefined') {
             clearInterval(cartItemsLengthChecker);
         } 
             
