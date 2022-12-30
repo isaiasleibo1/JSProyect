@@ -56,13 +56,13 @@ if (firstCartItems.length == 0) {
 } else {
     firstCartItems.forEach((cartItem) => {
         const firstCartItemPrice = cartItem.querySelector('.shopping-cart-item-price');
-        const firstCartItemPriceRepaired = Number(firstCartItemPrice.textContent.replace("$", ""));
+        const firstCartItemPriceRepaired = Number(firstCartItemPrice.textContent.replace("$", "").replace(".", ""));
 
         const firstCartItemQuantity = cartItem.querySelector('.shopping-cart-quantity-input');
         const firstCartItemQuantityRepaired = Number(firstCartItemQuantity.value);
 
         firstTotal += firstCartItemPriceRepaired * firstCartItemQuantityRepaired;
-        firstTotalText.innerHTML = `$${firstTotal.toFixed(0)}`;
+        firstTotalText.innerHTML = `$${firstTotal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
     });
 }
 
@@ -96,13 +96,13 @@ function updateCartTotal() {
     } else {
         cartItems.forEach((cartItem) => {
             const cartItemPrice = cartItem.querySelector('.shopping-cart-item-price');
-            const cartItemPriceRepaired = Number(cartItemPrice.textContent.replace("$", ""));
+            const cartItemPriceRepaired = Number(cartItemPrice.textContent.replace("$", "").replace(".", ""));
 
             const cartItemQuantity = cartItem.querySelector('.shopping-cart-quantity-input');
             const cartItemQuantityRepaired = Number(cartItemQuantity.value);
 
             total += cartItemPriceRepaired * cartItemQuantityRepaired;
-            totalText.innerHTML = `$${total.toFixed(0)}`;
+            totalText.innerHTML = `$${total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
         });
     }
 
