@@ -2,6 +2,12 @@
 
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
+const mobileMain = document.querySelector('#mobileMain');
+
+window.addEventListener('resize', () => {
+    mobileMain.style.maxHeight = `calc(${body.offsetHeight}px - 94px - 50px - 40px)`;
+});
+
 
 setInterval(() => {
     let windowWidthChecker2 = window.innerWidth;

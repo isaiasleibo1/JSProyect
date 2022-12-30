@@ -1060,7 +1060,6 @@ div#mobileMenu div.headerItem p .fa-solid {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  max-height: calc(100vh - 87px - 50px - 40px);
   overflow-x: scroll;
 }
 #cartMain .shoppingCartItem {
