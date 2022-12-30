@@ -2,6 +2,10 @@
 console.log('Atencón!!: Si la proporcón horizontal de la pantalla cambia la página será recargada.');
 console.log('Esto lo hacemos para evitar errores, disculpe las molestias.');
 
+let previousWidth = window.innerWidth;
+
 window.addEventListener('resize', () => {
-    location.reload();
+    if (window.innerWidth !== previousWidth) {
+       location.reload(); 
+    }
 })
