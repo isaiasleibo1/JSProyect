@@ -120,7 +120,7 @@ main #itemFunctions #functionsCont #addToCartCont #addToCart {
   background-color: black;
   color: white;
   font-family: Montserrat;
-  padding: 5px;
+  padding: 6px;
   border-radius: 8px;
   cursor: pointer;
 }

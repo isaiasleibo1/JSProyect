@@ -820,8 +820,12 @@ div#mobileMenu div.headerItem p .fa-solid {
   top: 7px;
   left: 10px;
   background-color: black;
-  padding: 0 3px;
+  padding: 3px;
   border-radius: 1em;
+}
+#cart #cartTitle h3 {
+  font-size: 1em;
+  margin: 0 3px;
 }
 #cart #cartDownPart {
   display: flex;
@@ -885,7 +889,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   background-color: white;
   font-family: Montserrat;
   font-weight: bolder;
-  padding: 2px;
+  padding: 4px;
   border-radius: 6px;
   transition: all 200ms;
 }
@@ -901,7 +905,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 #cart #cartItemsContainer {
   overflow-y: hidden;
