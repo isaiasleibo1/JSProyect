@@ -44,6 +44,10 @@ header {
             transform: scale(0.97);
         }
 
+        .mobileMenuCloser, .mobileMenuOpener {
+            font-size: 18px;
+        }
+
         .mobileMenuCloser.headerItem {
             display: none;
             opacity: 0;

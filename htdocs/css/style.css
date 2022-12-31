@@ -73,6 +73,9 @@ header div#headerItemContainer .headerItem:hover {
 header div#headerItemContainer .headerItem:active {
   transform: scale(0.97);
 }
+header div#headerItemContainer .mobileMenuCloser, header div#headerItemContainer .mobileMenuOpener {
+  font-size: 18px;
+}
 header div#headerItemContainer .mobileMenuCloser.headerItem {
   display: none;
   opacity: 0;
