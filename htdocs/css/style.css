@@ -1062,6 +1062,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   height: -moz-fit-content;
   height: fit-content;
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 #cartMain :nth-child(1) .shoppingCartItem {
   margin-top: 20px;

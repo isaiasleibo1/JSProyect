@@ -13,6 +13,7 @@
     justify-items: center;
     height: fit-content;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 
     :nth-child(1) {
         .shoppingCartItem {
