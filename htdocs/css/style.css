@@ -1062,7 +1062,6 @@ div#mobileMenu div.headerItem p .fa-solid {
   height: -moz-fit-content;
   height: fit-content;
   overflow-x: scroll;
-  scroll-behavior: smooth;
 }
 #cartMain :nth-child(1) .shoppingCartItem {
   margin-top: 20px;
@@ -1189,6 +1188,32 @@ div#mobileMenu div.headerItem p .fa-solid {
   transform: scale(1);
 }
 @media screen and (max-width: 420px) {
+  #cartMain .shoppingCartItem {
+    grid-template-areas: "img title title" "img price price" "input value delete";
+    grid-template-columns: 60px 1fr 64px !important;
+    width: 350px;
+  }
+  #cartMain .shoppingCartItem .shopping-cart-item-title {
+    font-size: 14px;
+  }
+  #cartMain .shoppingCartItem .price {
+    font-size: 12px;
+  }
+  #cartMain .shoppingCartItem .shopping-cart-quantity-input {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  #cartMain .shoppingCartItem .moreValueInput, #cartMain #cart .shoppingCartItem .lessValueInput, #cart #cartMain .shoppingCartItem .lessValueInput, #cartMain .shoppingCartItem :nth-child(5) .lessValueInput, #cartMain .shoppingCartItem .lessValueInput {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  #cartMain .shoppingCartItem .btn-delete {
+    height: 17px !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+@media screen and (max-width: 395px) {
   #cartMain .shoppingCartItem {
     grid-template-areas: "img title title" "img price price" "input value delete";
     grid-template-columns: 60px 1fr 64px !important;

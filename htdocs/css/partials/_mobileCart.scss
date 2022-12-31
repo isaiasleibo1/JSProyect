@@ -13,7 +13,6 @@
     justify-items: center;
     height: fit-content;
     overflow-x: scroll;
-    scroll-behavior: smooth;
 
     :nth-child(1) {
         .shoppingCartItem {
@@ -186,6 +185,41 @@
                 height: 20px !important;
             }
             
+            width: 350px;
+        }
+
+        @media screen and (max-width: 395px) {
+
+            grid-template-areas: 
+            "img title title"
+            "img price price"
+            "input value delete";
+            grid-template-columns: 60px 1fr 64px !important;
+
+            .shopping-cart-item-title {
+                font-size: 14px;
+            }
+
+            .price {
+                font-size: 12px;
+            }
+
+            .shopping-cart-quantity-input {
+                width: 25px !important;
+                height: 25px !important;
+            }
+
+            .moreValueInput, .lessValueInput {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            .btn-delete {
+                height: 17px !important;
+                width: 20px !important;
+                height: 20px !important;
+            }
+            
             width: 310px;
         } 
         
@@ -193,9 +227,10 @@
             width: 290px !important;
         }
     }
+}
 
     
-}
+
 
 #mobileTotalContainer {
     background: #252525;
