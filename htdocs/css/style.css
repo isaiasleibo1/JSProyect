@@ -1170,8 +1170,8 @@ div#mobileMenu div.headerItem p .fa-solid {
   grid-area: delete;
 }
 #cartMain .shoppingCartItem :nth-child(6) .btn-delete {
-  width: 50px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border: 0;
   background: linear-gradient(rgb(255, 0, 0), rgb(255, 111, 111));
   font-family: Montserrat;
@@ -1208,6 +1208,8 @@ div#mobileMenu div.headerItem p .fa-solid {
   }
   #cartMain .shoppingCartItem .btn-delete {
     height: 17px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
 }
 @media screen and (max-width: 335px) {
