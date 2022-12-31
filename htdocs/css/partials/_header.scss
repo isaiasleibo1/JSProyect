@@ -46,6 +46,7 @@ header {
 
         .mobileMenuOpener {
             font-size: 18px;
+            user-select: none;
         }
 
         .mobileMenuCloser.headerItem {
@@ -54,6 +55,7 @@ header {
             scale: 1.2;
             margin-left: 8px;
             font-size: 20px;
+            user-select: none;
         }
 
         #cartButtonContainer {

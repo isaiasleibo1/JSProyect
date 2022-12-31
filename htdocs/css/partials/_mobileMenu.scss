@@ -24,12 +24,12 @@ div#mobileMenu {
     background: linear-gradient(rgb(0, 0, 34), rgb(0, 0, 65));
     box-shadow: rgba(50, 50, 93) 0px 50px 100px -20px, rgba(0, 0, 0) 0px 30px 60px -30px;
     position: absolute;
-    top: 50px;
-    border-bottom-right-radius: 1em;
+    top: 45px;
     padding: 10px;
     color: white;
     animation-duration: 200ms !important;
     animation-fill-mode: forwards !important;
+    border-bottom-right-radius: 6px;
 
     .headerItem:hover {
         transform: scale(1.05);
@@ -37,6 +37,13 @@ div#mobileMenu {
 
     .headerItem:active {
         transform: scale(0.97);
+    }
+
+    #mobileHeaderTitle {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 2px;
     }
 
     div.headerItem {
@@ -68,7 +75,7 @@ div#mobileMenu {
 
 @media screen and (max-width: 620px) {
     header {
-        height: 50px !important;
+        height: 45px !important;
         
         .pageRedirect {
             display: none !important;
