@@ -1063,6 +1063,12 @@ div#mobileMenu div.headerItem p .fa-solid {
   height: fit-content;
   overflow-x: scroll;
 }
+#cartMain :nth-child(1) .shoppingCartItem {
+  margin-top: 20px;
+}
+#cartMain :nth-last-child(1) .shoppingCartItem {
+  margin-bottom: 20px;
+}
 #cartMain .shoppingCartItem {
   margin: 7px 0;
   background-color: rgb(32, 32, 32);
