@@ -1052,6 +1052,7 @@ div#mobileMenu div.headerItem p .fa-solid {
 #mobileMain {
   display: flex;
   flex-direction: column;
+  transition: height 0ms;
 }
 
 #cartMain {

@@ -3,9 +3,11 @@
 const cartMain = document.querySelector('#cartMain');
 cartMain.innerHTML = localStorage.getItem('cartStorage');
 const mobileMain = document.querySelector('#mobileMain');
+mobileMain.style.maxHeight = `calc(${window.innerHeight}px - 94px - 50px - 40px)`;
 
 window.addEventListener('resize', () => {
-    mobileMain.style.maxHeight = `calc(${body.offsetHeight}px - 94px - 50px - 40px)`;
+    mobileMain.style.maxHeight = `calc(${window.innerHeight}px - 94px - 50px - 40px)`;
+    console.log(body.offsetHeight)
 });
 
 
