@@ -73,7 +73,7 @@ header div#headerItemContainer .headerItem:hover {
 header div#headerItemContainer .headerItem:active {
   transform: scale(0.97);
 }
-header div#headerItemContainer .mobileMenuCloser, header div#headerItemContainer .mobileMenuOpener {
+header div#headerItemContainer .mobileMenuOpener {
   font-size: 18px;
 }
 header div#headerItemContainer .mobileMenuCloser.headerItem {
@@ -81,6 +81,7 @@ header div#headerItemContainer .mobileMenuCloser.headerItem {
   opacity: 0;
   scale: 1.2;
   margin-left: 8px;
+  font-size: 20px;
 }
 header div#headerItemContainer #cartButtonContainer {
   display: flex;
