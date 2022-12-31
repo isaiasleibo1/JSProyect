@@ -1081,6 +1081,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   padding: 10px;
   padding-bottom: 2px;
   align-items: center;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.45);
 }
 #cartMain .shoppingCartItem .shopping-cart-image {
   width: 50px;
