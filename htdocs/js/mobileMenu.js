@@ -12,7 +12,6 @@ const body = document.querySelector('body');
 function mobileMenuOpenerClicked() {
 
      mobileMenuOpener.style.opacity = '0';
-     body.style.overflowY = 'hidden';
 
      setTimeout(() => {
          mobileMenuOpener.style.display = 'none';
@@ -30,7 +29,6 @@ function mobileMenuCloserClicked() {
 
     mobileMenuCloser.style.opacity = '0';
     mobileMenuOpener.style.opacity = '0';
-    body.style.overflowY = 'scroll';
 
     setTimeout(() => {
         mobileMenuCloser.style.display = 'none';
