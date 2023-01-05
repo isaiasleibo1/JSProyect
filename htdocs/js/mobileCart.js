@@ -73,7 +73,6 @@ setTimeout(() => {
 // Función para eliminar item
 function itemDeleteButtonClicked(event) {
     const button = event.target;
-    console.log(button)
     const item = button.closest('.shoppingCartItem').parentElement;
 
     item.remove();

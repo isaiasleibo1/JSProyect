@@ -1,16 +1,19 @@
+let alert1IsRunning = false;
+let alert2IsRunning = false;
+
 function alertModified(string) {
-    console.log(string);
-    
     const alert1 = (string == 'Por favor, seleccione un producto.');
     const alert2 = (string == 'Su producto se ha añadido correctamente.');
     let cartAlert; 
 
     if (alert1) {
+        if (alert1IsRunning) {return};
         cartAlert = document.querySelector('#cartAlert1');
+        alert1IsRunning = true;
     } else if (alert2) {
+        if (alert2IsRunning) {return};
         cartAlert = document.querySelector('#cartAlert2');
-    } else {
-        console.log(new Error('No hay un alert'));
+        alert2IsRunning = true;
     }
 
         setTimeout(() => {
@@ -40,6 +43,12 @@ function alertModified(string) {
                 cartAlert.style.opacity = 0;
                 
                 setTimeout(() => {
+                    if (alert1) {
+                        alert1IsRunning = false;
+                    } else if (alert2) {
+                        alert2IsRunning = false;
+                    }
+
                     cartAlert.style.display = 'none';
                 }, 200)
                 
