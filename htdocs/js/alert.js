@@ -1,4 +1,11 @@
+let alertModifiedIsRunning = false;
+
 function alertModified(string) {
+    if (alertModifiedIsRunning) {
+        return;
+    }
+
+    alertModifiedIsRunning = true;
     const cartAlert = document.querySelector('#cartAlert');
         setTimeout(() => {
 
@@ -23,11 +30,13 @@ function alertModified(string) {
                 }
             }, 20);
 
-            setTimeout(() => {
+            timeoutID = setTimeout(() => {
+                timeoutIsRunning = true;
                 cartAlert.style.opacity = 0;
                 
                 setTimeout(() => {
                     cartAlert.style.display = 'none';
+                    alertModifiedIsRunning = false;
                 }, 200)
                 
                 clearInterval(intervalFunction);
