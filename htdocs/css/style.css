@@ -1300,7 +1300,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   bottom: 0;
 }
 
-#cartAlert {
+.cartAlert {
   opacity: 0;
   padding: 5px;
   background-color: rgb(56, 56, 56);
@@ -1315,7 +1315,7 @@ div#mobileMenu div.headerItem p .fa-solid {
   z-index: 3;
   border: 1px solid white;
 }
-#cartAlert p {
+.cartAlert p {
   color: white;
 }
 

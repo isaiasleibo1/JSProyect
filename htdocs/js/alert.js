@@ -1,12 +1,18 @@
-let alertModifiedIsRunning = false;
-
 function alertModified(string) {
-    if (alertModifiedIsRunning) {
-        return;
+    console.log(string);
+    
+    const alert1 = (string == 'Por favor, seleccione un producto.');
+    const alert2 = (string == 'Su producto se ha añadido correctamente.');
+    let cartAlert; 
+
+    if (alert1) {
+        cartAlert = document.querySelector('#cartAlert1');
+    } else if (alert2) {
+        cartAlert = document.querySelector('#cartAlert2');
+    } else {
+        console.log(new Error('No hay un alert'));
     }
 
-    alertModifiedIsRunning = true;
-    const cartAlert = document.querySelector('#cartAlert');
         setTimeout(() => {
 
             cartAlert.style.display = 'block';
@@ -31,12 +37,10 @@ function alertModified(string) {
             }, 20);
 
             timeoutID = setTimeout(() => {
-                timeoutIsRunning = true;
                 cartAlert.style.opacity = 0;
                 
                 setTimeout(() => {
                     cartAlert.style.display = 'none';
-                    alertModifiedIsRunning = false;
                 }, 200)
                 
                 clearInterval(intervalFunction);
