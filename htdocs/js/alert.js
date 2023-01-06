@@ -2,7 +2,8 @@ let alert1IsRunning = false;
 let alert2IsRunning = false;
 
 function alertModified(string) {
-    const alert1 = (string == 'Por favor, seleccione un producto.');
+    console.log(string);
+    const alert1 = (string == 'Por favor, seleccione un producto.' || 'Su pedido llegara pronto!!');
     const alert2 = (string == 'Su producto se ha añadido correctamente.');
     let cartAlert; 
 
@@ -14,7 +15,7 @@ function alertModified(string) {
         if (alert2IsRunning) {return};
         cartAlert = document.querySelector('#cartAlert2');
         alert2IsRunning = true;
-    }
+    } 
 
         setTimeout(() => {
 
