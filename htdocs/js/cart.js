@@ -12,7 +12,7 @@ var itemDeleteButtons = document.querySelectorAll('.btn-delete')
     itemDeleteButtons.forEach((itemDeleteButton) => {
       itemDeleteButton.addEventListener('click', itemDeleteButtonClicked);  
 })
-
+ 
 // Botón aumentar cantidad
 var moreValueInput = document.querySelectorAll('.moreValueInput');
 moreValueInput.forEach((button) => {
